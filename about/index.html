@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Yuya Harada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="lang-en theme-dark">
+  <div class="status-bar">
+    <div class="status-left">
+      <span id="status-time">9:41</span>
+    </div>
+    <div class="status-center">
+      <span data-lang="en">About</span>
+      <span data-lang="ja">自己紹介</span>
+    </div>
+    <div class="status-right">
+        <span class="status-icon">📶</span>
+        <span class="status-icon">📡</span>
+        <span class="status-icon battery">
+            <span class="battery-body">
+            <span class="battery-level"></span>
+            </span>
+            <span class="battery-tip"></span>
+        </span>
+        <div class="theme-toggle">
+        <button type="button" id="theme-toggle-btn" aria-label="Toggle theme">
+        ☾
+        </button>
+    </div>
+      <div class="lang-toggle">
+        <button type="button" data-lang-switch="en" class="active">EN</button>
+        <button type="button" data-lang-switch="ja">日本語</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="screen screen-overview">
+    <div class="home">
+      <header class="hero">
+        <div class="hero-main">
+          <h1 class="hero-name">
+            <span data-lang="en">About Me</span>
+            <span data-lang="ja">自己紹介</span>
+          </h1>
+          <p class="hero-tagline">
+            <span data-lang="en">
+              Student researcher in NLP &amp; AIWolf at Kano Laboratory, Shizuoka University.
+            </span>
+            <span data-lang="ja">
+              静岡大学 狩野研究室に所属する NLP / AIWolf 研究者です。
+            </span>
+          </p>
+          <p class="hero-sub">
+            <span data-lang="en">
+              Interested in natural-language-based agents that can reason, persuade,
+              deceive, and coordinate in complex social games.
+            </span>
+            <span data-lang="ja">
+              自然言語で推論・説得・欺瞞・協調を行うエージェントや、社会的ゲームにおける
+              対話と戦略の関係に関心があります。
+            </span>
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="label" data-lang="en">Name</span>
+            <span class="label" data-lang="ja">名前</span>
+            <span class="value" data-lang="en">Yuya Harada</span>
+            <span class="value" data-lang="ja">原田 悠矢</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="label" data-lang="en">Affiliation</span>
+            <span class="label" data-lang="ja">所属</span>
+            <span class="value" data-lang="en">Kano Laboratory, Shizuoka University</span>
+            <span class="value" data-lang="ja">静岡大学 情報学部 狩野研究室</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span data-lang="en">Profile</span>
+          <span data-lang="ja">プロフィール</span>
+        </h2>
+        <div class="section-body two-col">
+          <div class="card">
+            <dl class="info-list">
+              <div>
+                <dt data-lang="en">Name</dt>
+                <dt data-lang="ja">名前</dt>
+                <dd>
+                    <span data-lang="en">Yuya Harada</span>
+                    <span data-lang="ja">原田 悠矢</span>
+                </dd>
+              </div>
+              <div>
+                <dt data-lang="en">Birthday</dt>
+                <dt data-lang="ja">生年月日</dt>
+                <dd>
+                  <span data-lang="en">2004/05/27</span>
+                  <span data-lang="ja">2004年5月27日</span>
+                </dd>
+              </div>
+              <div>
+                <dt data-lang="en">Birthplace</dt>
+                <dt data-lang="ja">出身</dt>
+                <dd>
+                    <span data-lang="en">Hamamatsu, Shizuoka, Japan</span>
+                    <span data-lang="ja">日本 静岡県 浜松市</span>
+                </dd>
+              </div>
+              <div>
+                <dt data-lang="en">Affiliation</dt>
+                <dt data-lang="ja">所属</dt>
+                <dd>
+                  <span data-lang="en">Kano Laboratory, Shizuoka University</span>
+                  <span data-lang="ja">静岡大学 情報学部 狩野研究室</span>
+                </dd>
+              </div>
+              <div>
+                <dt data-lang="en">Focus</dt>
+                <dt data-lang="ja">研究分野</dt>
+                <dd>
+                  <span data-lang="en">Natural Language Processing (NLP), AIWolf</span>
+                  <span data-lang="ja">自然言語処理、人狼知能</span>
+                </dd>
+              </div>
+              <div>
+                <dt data-lang="en">Email</dt>
+                <dt data-lang="ja">メール</dt>
+                <dd><a href="mailto:yharada@kanolab.net">yharada@kanolab.net</a></dd>
+              </div>
+            </dl>
+          </div>
+          <div class="card">
+            <h3>
+              <span data-lang="en">Short Bio</span>
+              <span data-lang="ja">概要</span>
+            </h3>
+            <p data-lang="en">
+              I am a student researcher at Kano Laboratory, Shizuoka University,
+              focusing on natural language processing and AI agents for the AIWolf
+              (Werewolf Intelligence) contest. My work explores how LLM-based
+              agents can reason, collaborate, persuade, and deceive through dialogue
+              in multi-agent, partially observable settings.
+            </p>
+            <p data-lang="ja">
+              静岡大学 狩野研究室に所属し、自然言語処理と AI 人狼（AIWolf）の
+              エージェントに関する研究に取り組んでいます。複数エージェント・
+              不完全情報ゲームにおいて、LLMベースのエージェントがどのように
+              推論・協調・説得・欺瞞を行えるかに興味があります。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-home-button">
+        <a
+            href="/#home-screen"
+            class="home-button"
+            aria-label="Back to home screen"
+        ></a>
+      </section>
+    </div>
+
+    <button class="to-top" aria-label="Scroll to top">⌃</button>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

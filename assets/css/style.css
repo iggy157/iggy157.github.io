@@ -1,0 +1,679 @@
+/* ===== Reset-ish ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(circle at top, #151928, #050816 50%, #02010a);
+  color: #f9fafb;
+}
+
+/* ===== Language visibility ===== */
+body.lang-en [data-lang="ja"],
+body.lang-ja [data-lang="en"] {
+  display: none;
+}
+
+/* ===== Shell / Screens ===== */
+.shell {
+  scroll-behavior: smooth;
+}
+
+.screen {
+  min-height: 100vh;
+  position: relative;
+  padding-top: 40px; /* status bar 分 */
+}
+
+/* ===== Status bar ===== */
+.status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  opacity: 0.95;
+  z-index: 40;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0.85),
+    rgba(15, 23, 42, 0.4)
+  );
+  backdrop-filter: blur(18px);
+  color: #f9fafb;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05) inset,
+    0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.status-left,
+.status-center,
+.status-right {
+  display: flex;
+  align-items: center;
+}
+
+.status-left {
+  flex: 0 0 auto;
+  min-width: 60px;
+}
+
+.status-center {
+  flex: 1 1 auto;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-right {
+  flex: 0 0 auto;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+#status-time {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Icons in status bar */
+.status-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Battery icon */
+.battery {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.battery-body {
+  width: 20px;
+  height: 10px;
+  border-radius: 3px;
+  border: 1px solid rgba(249, 250, 251, 0.8);
+  padding: 1px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.battery-level {
+  width: 70%;
+  height: 100%;
+  border-radius: 2px;
+  background: #22c55e;
+}
+
+.battery-tip {
+  width: 3px;
+  height: 6px;
+  border-radius: 1px;
+  border: 1px solid rgba(249, 250, 251, 0.8);
+}
+
+/* Language toggle buttons */
+.lang-toggle {
+  display: inline-flex;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+}
+
+.lang-toggle button {
+  border: none;
+  padding: 2px 6px;
+  font-size: 10px;
+  cursor: pointer;
+  background: transparent;
+  color: #e5e7eb;
+}
+
+.lang-toggle button.active {
+  background: rgba(59, 130, 246, 0.3);
+  color: #bfdbfe;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: inline-flex;
+  margin-right: 4px;
+}
+
+.theme-toggle button {
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  font-size: 11px;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.theme-toggle button:hover {
+  filter: brightness(1.1);
+}
+
+/* ===== Lock screen ===== */
+.screen-lock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #0f172a, #020617 55%, #000000);
+}
+
+.lock-inner {
+  text-align: center;
+  color: #f9fafb;
+}
+
+.lock-time {
+  font-size: clamp(64px, 10vw, 80px);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.lock-date {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 24px;
+}
+
+.lock-owner {
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.lock-hint {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.lock-arrow {
+  margin-top: 8px;
+  font-size: 18px;
+  animation: lock-arrow 1.2s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes lock-arrow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+}
+
+/* ===== Home screen ===== */
+.screen-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #1e293b, #020617 60%);
+}
+
+.home-inner {
+  width: min(900px, 100%);
+  padding: 32px 16px 40px;
+}
+
+.home-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.home-title {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Icon grid */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 18px;
+  justify-items: center;
+}
+
+.icon-card {
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, #4f46e5, #111827);
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(148, 163, 184, 0.5) inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #f9fafb;
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    filter 0.16s ease-out;
+  backdrop-filter: blur(16px);
+}
+
+.icon-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 16px 32px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(248, 250, 252, 0.8) inset;
+  filter: brightness(1.05);
+}
+
+.icon-card.small {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(248, 250, 252, 0.7) inset;
+}
+
+.icon-emoji {
+  font-size: 34px;
+  margin-bottom: 4px;
+}
+
+.icon-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.icon-sub {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+/* App open animation */
+.icon-card.app-link.opening {
+  transform: scale(0.94);
+  filter: brightness(1.15);
+}
+
+/* Dock */
+.dock {
+  margin-top: 26px;
+  padding: 10px 18px;
+  border-radius: 26px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(148, 163, 184, 0.6) inset;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* ===== Overview screen ===== */
+.screen-overview {
+  background: radial-gradient(circle at top, #020617, #020617 60%, #020617);
+  color: #e5e7eb;
+}
+
+.home {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  padding: 72px 16px 64px;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.8fr);
+  gap: 18px;
+  margin-bottom: 24px;
+  padding: 18px 20px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.8));
+  backdrop-filter: blur(22px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(148, 163, 184, 0.6) inset;
+}
+
+.hero-name {
+  margin: 0 0 6px;
+  font-size: clamp(26px, 4vw, 32px);
+  letter-spacing: 0.02em;
+}
+
+.hero-tagline {
+  margin: 0 0 6px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.hero-sub {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.hero-meta {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.hero-meta-item .label {
+  display: inline-block;
+  opacity: 0.6;
+  margin-right: 4px;
+}
+
+.hero-meta-item .value {
+  display: block;
+  font-weight: 500;
+}
+
+/* Sections / cards */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+.section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-body.two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 16px;
+}
+
+.card {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow:
+    0 10px 26px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(30, 64, 175, 0.6) inset;
+  font-size: 13px;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.card p {
+  margin-top: 0;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* ===== Home button (back to home screen) ===== */
+.section-home-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.home-button {
+  /* 横長ピル型（PC などの横長画面向け） */
+  width: 120px;
+  height: 48px;
+  border-radius: 999px;
+  border: 2px solid rgba(148, 163, 184, 0.9);
+  background: radial-gradient(circle at 30% 30%, #111827, #020617);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(15, 23, 42, 0.9) inset;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* 押した感のアニメーション */
+.home-button:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(15, 23, 42, 0.9) inset;
+}
+
+/* ===== Blog list ===== */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.blog-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.blog-item-title {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.blog-item-meta {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* Links */
+a {
+  color: #93c5fd;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll-to-top button */
+.to-top {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(148, 163, 184, 0.8) inset;
+  backdrop-filter: blur(14px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* ===== Light theme overrides ===== */
+
+body.theme-light {
+  background: radial-gradient(circle at top, #e0ecff, #f9fafb 60%, #f3f4f6);
+  color: #111827;
+}
+
+/* ステータスバーを明るく */
+body.theme-light .status-bar {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.96),
+    rgba(248, 250, 252, 0.9)
+  );
+  color: #111827;
+  box-shadow:
+    0 1px 0 rgba(148, 163, 184, 0.35) inset,
+    0 1px 6px rgba(15, 23, 42, 0.2);
+}
+
+body.theme-light .battery-body {
+  border-color: rgba(15, 23, 42, 0.7);
+}
+
+body.theme-light .battery-tip {
+  border-color: rgba(15, 23, 42, 0.7);
+}
+
+body.theme-light .lang-toggle {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(148, 163, 184, 0.9);
+}
+
+body.theme-light .lang-toggle button {
+  color: #111827;
+}
+
+body.theme-light .lang-toggle button.active {
+  background: rgba(37, 99, 235, 0.12);
+  color: #1d4ed8;
+}
+
+/* テーマトグルも明るく */
+body.theme-light .theme-toggle button {
+  background: rgba(248, 250, 252, 0.95);
+  color: #111827;
+}
+
+/* ロック画面をライト寄りに */
+body.theme-light .screen-lock {
+  background: radial-gradient(circle at top, #dbeafe, #e5e7eb 55%, #d1d5db);
+  color: #111827;
+}
+
+/* ホーム画面背景を明るく */
+body.theme-light .screen-home {
+  background: radial-gradient(circle at top, #dbeafe, #e5e7eb 60%);
+}
+
+/* オーバービュー背景を明るく */
+body.theme-light .screen-overview {
+  background: radial-gradient(circle at top, #eff6ff, #f9fafb 60%, #e5e7eb);
+  color: #111827;
+}
+
+/* アイコンカード */
+body.theme-light .icon-card {
+  background: radial-gradient(circle at top left, #ffffff, #dbeafe);
+  color: #111827;
+  box-shadow:
+    0 8px 18px rgba(15, 23, 42, 0.25),
+    0 0 0 1px rgba(148, 163, 184, 0.6) inset;
+}
+
+body.theme-light .icon-card.small {
+  box-shadow:
+    0 6px 16px rgba(15, 23, 42, 0.2),
+    0 0 0 1px rgba(148, 163, 184, 0.7) inset;
+}
+
+/* Dock */
+body.theme-light .dock {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 8px 20px rgba(148, 163, 184, 0.7),
+    0 0 0 1px rgba(209, 213, 219, 0.9) inset;
+}
+
+/* 概要画面のカード／ヒーロー */
+body.theme-light .hero {
+  background: linear-gradient(135deg, #ffffff, #e5e7eb);
+  box-shadow:
+    0 16px 40px rgba(148, 163, 184, 0.5),
+    0 0 0 1px rgba(209, 213, 219, 0.9) inset;
+}
+
+body.theme-light .card {
+  background: #ffffff;
+  box-shadow:
+    0 10px 26px rgba(148, 163, 184, 0.5),
+    0 0 0 1px rgba(209, 213, 219, 0.9) inset;
+}
+
+/* ホームボタン（ライトテーマ） */
+body.theme-light .home-button {
+  background: radial-gradient(circle at 30% 30%, #f9fafb, #e5e7eb);
+  border-color: rgba(148, 163, 184, 0.9);
+  box-shadow:
+    0 6px 16px rgba(148, 163, 184, 0.7),
+    0 0 0 1px rgba(209, 213, 219, 0.9) inset;
+}
+
+/* リンク色 */
+body.theme-light a {
+  color: #2563eb;
+}
+
+/* to-top ボタンも明るく */
+body.theme-light .to-top {
+  background: rgba(248, 250, 252, 0.95);
+  color: #111827;
+  box-shadow:
+    0 10px 24px rgba(148, 163, 184, 0.8),
+    0 0 0 1px rgba(209, 213, 219, 0.9) inset;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 720px) {
+  .home {
+    padding-top: 60px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section-body.two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dock {
+    justify-content: space-between;
+  }
+
+  .status-bar {
+    font-size: 11px;
+  }
+
+  .lang-toggle button {
+    padding: 2px 4px;
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Research | Yuya Harada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="lang-en theme-dark">
+  <div class="status-bar">
+    <div class="status-left">
+      <span id="status-time">9:41</span>
+    </div>
+    <div class="status-center">
+      <span data-lang="en">Research</span>
+      <span data-lang="ja">研究</span>
+    </div>
+    <div class="status-right">
+        <span class="status-icon">📶</span>
+        <span class="status-icon">📡</span>
+        <span class="status-icon battery">
+            <span class="battery-body">
+            <span class="battery-level"></span>
+            </span>
+            <span class="battery-tip"></span>
+        </span>
+        <div class="theme-toggle">
+        <button type="button" id="theme-toggle-btn" aria-label="Toggle theme">
+        ☾
+        </button>
+    </div>
+      <div class="lang-toggle">
+        <button type="button" data-lang-switch="en" class="active">EN</button>
+        <button type="button" data-lang-switch="ja">日本語</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="screen screen-overview">
+    <div class="home">
+      <header class="hero">
+        <div class="hero-main">
+          <h1 class="hero-name">
+            <span data-lang="en">Research</span>
+            <span data-lang="ja">研究内容</span>
+          </h1>
+          <p class="hero-tagline">
+            <span data-lang="en">
+              Natural-language Werewolf agents, dialogue systems, and long-context reasoning.
+            </span>
+            <span data-lang="ja">
+              自然言語人狼エージェント、対話システム、長期文脈推論に関する研究。
+            </span>
+          </p>
+          <p class="hero-sub">
+            <span data-lang="en">
+              Focusing on the AIWolf natural language division and agents that can reason,
+              persuade, and deceive through conversation.
+            </span>
+            <span data-lang="ja">
+              AI 人狼コンテスト自然言語部門を中心に、会話による推論・説得・欺瞞が可能な
+              エージェントを研究しています。
+            </span>
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="label" data-lang="en">Affiliation</span>
+            <span class="label" data-lang="ja">所属</span>
+            <span class="value" data-lang="en">Kano Laboratory, Shizuoka University</span>
+            <span class="value" data-lang="ja">静岡大学 工学部 狩野研究室</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="label" data-lang="en">Focus</span>
+            <span class="label" data-lang="ja">研究分野</span>
+            <span class="value" data-lang="en">NLP, AIWolf, Dialogue Systems</span>
+            <span class="value" data-lang="ja">自然言語処理、AIWolf、対話システム</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span data-lang="en">Development of AIWolf Agent</span>
+          <span data-lang="ja">AIWolf エージェントの開発</span>
+        </h2>
+        <div class="section-body">
+          <article class="card">
+            <p data-lang="en">
+              I am working on developing autonomous agents for the natural language
+              division of the AIWolf contest, where agents play the game of Werewolf
+              using only text-based conversation for reasoning, persuasion, and deception.
+            </p>
+            <p data-lang="ja">
+              自然言語部門の AI 人狼コンテストにおいて、チャットのみを用いて推論・説得・欺瞞を行い、
+              自律的に人狼ゲームをプレイするエージェントの開発を行っています。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span data-lang="en">About the AIWolf Project</span>
+              <span data-lang="ja">AIWolf プロジェクトについて</span>
+            </h3>
+            <p data-lang="en">
+              The natural language division of the Werewolf Intelligence Competition
+              is a contest in which agent players compete autonomously in games of
+              Werewolf, using only natural language conversation to perform
+              reasoning, persuasion, and deception. Its goal is to evaluate the
+              limitations and potential of dialogue systems and large language models.
+            </p>
+            <p data-lang="en">
+              The competition features a 5-player village track and a 13-player
+              village track. In complex situations that include multiple roles and
+              secret conversations among the werewolves, agents developed by each
+              team connect to the game server and play autonomously.
+            </p>
+            <p data-lang="en">
+              Evaluation is conducted from multiple angles, not only by win rate but
+              also through human subjective assessment, automated subjective
+              evaluation using LLM-as-a-judge, and detailed log analysis.
+            </p>
+
+            <p data-lang="ja">
+              AI 人狼知能コンテストの自然言語部門は、エージェント同士が人狼ゲームを
+              自動でプレイし、その中で行われる会話のみを用いて推論・説得・欺瞞を行う競技です。
+              対話システムや大規模言語モデルの限界と可能性を評価することを目的としています。
+            </p>
+            <p data-lang="ja">
+              大会では 5人村と 13人村のトラックがあり、多数の役職や人狼同士の秘密会話などを含む
+              複雑な状況の中で、各チームが開発したエージェントがゲームサーバに接続して自律的にプレイします。
+            </p>
+            <p data-lang="ja">
+              評価は単なる勝率だけでなく、人間による主観評価、LLM-as-a-judge による自動主観評価、
+              詳細なログ解析など多面的に行われます。
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span data-lang="en">Issues</span>
+              <span data-lang="ja">課題</span>
+            </h3>
+            <ul data-lang="en">
+              <li>Fails to respond appropriately to questions or others’ statements, leading to poor turn-taking.</li>
+              <li>Makes remarks that don’t match the situation or repeats content, showing weak grasp of game state.</li>
+              <li>Struggles to handle player relationships and cooperative actions in complex multi-role settings.</li>
+              <li>Tends to follow specific opinions, making diverse and strategic counterarguments difficult.</li>
+              <li>Vulnerable to repeated prompting, sometimes leaking secret information or breaking consistency.</li>
+              <li>Small number of participants makes win rates and subjective evaluations unstable.</li>
+              <li>LLM-based responses are slow, limiting real-time play with human players.</li>
+            </ul>
+            <ul data-lang="ja">
+              <li>質問や他者発話への応答が不適切になりやすく、会話のターン交代や文脈利用が不十分。</li>
+              <li>状況と合わない発言や同内容の繰り返しが多く、ゲーム状態の把握や自然さに課題がある。</li>
+              <li>役職やプレイヤー数が増える複雑な状況では、プレイヤー間関係や協調行動の扱いが難しい。</li>
+              <li>過去ログを参照する一方で、特定の意見に追従しやすく、多様な戦略的反論や視点の提示が難しい。</li>
+              <li>繰り返しのプロンプトに弱く、秘密情報の漏洩や、嘘と真実の矛盾維持が難しい。</li>
+              <li>参加チーム数が少なく、同一エージェント同士の対戦が多いため、勝率や主観評価が安定しにくい。</li>
+              <li>LLM 応答に時間がかかるため、人間とのリアルタイム混成対戦には高速化が必要。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>
+              <span data-lang="en">Approach</span>
+              <span data-lang="ja">アプローチ</span>
+            </h3>
+            <ul data-lang="en">
+              <li>Hierarchical BDI architecture to align local actions with long-term strategies.</li>
+              <li>Personality modeling via cognitive biases and 24 MBTI-derived parameters.</li>
+              <li>Commitment tracking for contradiction detection and game state understanding.</li>
+            </ul>
+            <ul data-lang="ja">
+              <li>階層型 BDI アーキテクチャにより、長期戦略と整合する各ステージの行動選択を行うエージェントの構築。</li>
+              <li>認知バイアスを取り入れ、MBTI 由来の 24 パラメータによる個性を再現するエージェント設計。</li>
+              <li>コミットメントトラッキングを用いて矛盾検出とゲーム状態理解を行うエージェントの構築。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-home-button">
+        <a
+            href="/#home-screen"
+            class="home-button"
+            aria-label="Back to home screen"
+        ></a>
+      </section>
+    </div>
+
+    <button class="to-top" aria-label="Scroll to top">⌃</button>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

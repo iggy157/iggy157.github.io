@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Blog | Yuya Harada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="lang-en theme-dark">
+  <div class="status-bar">
+    <div class="status-left">
+      <span id="status-time">9:41</span>
+    </div>
+    <div class="status-center">
+      <span data-lang="en">Blog</span>
+      <span data-lang="ja">ブログ</span>
+    </div>
+    <div class="status-right">
+        <span class="status-icon">📶</span>
+        <span class="status-icon">📡</span>
+        <span class="status-icon battery">
+            <span class="battery-body">
+            <span class="battery-level"></span>
+            </span>
+            <span class="battery-tip"></span>
+        </span>
+        <div class="theme-toggle">
+        <button type="button" id="theme-toggle-btn" aria-label="Toggle theme">
+        ☾
+        </button>
+    </div>
+      <div class="lang-toggle">
+        <button type="button" data-lang-switch="en" class="active">EN</button>
+        <button type="button" data-lang-switch="ja">日本語</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="screen screen-overview">
+    <div class="home">
+      <header class="hero">
+        <div class="hero-main">
+          <h1 class="hero-name">
+            <span data-lang="en">Blog</span>
+            <span data-lang="ja">ブログ</span>
+          </h1>
+          <p class="hero-tagline">
+            <span data-lang="en">Notes on AIWolf, NLP, and experiments.</span>
+            <span data-lang="ja">AIWolf や NLP、実験メモなどの雑記。</span>
+          </p>
+          <p class="hero-sub">
+            <span data-lang="en">
+              Articles are managed per language. The list below is loaded from JSON
+              so I can easily add new posts over time.
+            </span>
+            <span data-lang="ja">
+              記事は言語ごとに管理しており、下の一覧は JSON から読み込んで自動生成しています。
+              今後も少しずつ追加していく予定です。
+            </span>
+          </p>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span data-lang="en">English posts</span>
+          <span data-lang="ja">英語の記事</span>
+        </h2>
+        <div class="section-body">
+          <article class="card">
+            <div id="blog-list-en" class="blog-list"></div>
+            <p class="muted" id="blog-empty-en">
+              <span data-lang="en">No posts yet.</span>
+              <span data-lang="ja">まだ英語の記事はありません。</span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span data-lang="en">Japanese posts</span>
+          <span data-lang="ja">日本語の記事</span>
+        </h2>
+        <div class="section-body">
+          <article class="card">
+            <div id="blog-list-ja" class="blog-list"></div>
+            <p class="muted" id="blog-empty-ja">
+              <span data-lang="en">No posts yet.</span>
+              <span data-lang="ja">まだ日本語の記事はありません。</span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-home-button">
+        <a
+            href="/#home-screen"
+            class="home-button"
+            aria-label="Back to home screen"
+        ></a>
+      </section>
+    </div>
+
+    <button class="to-top" aria-label="Scroll to top">⌃</button>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

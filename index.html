@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Yuya Harada | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="lang-en theme-dark">
+  <!-- iOS風ステータスバー -->
+  <div class="status-bar">
+    <div class="status-left">
+      <span id="status-time">9:41</span>
+    </div>
+    <div class="status-center">
+      <span data-lang="en">Portfolio</span>
+      <span data-lang="ja">ポートフォリオ</span>
+    </div>
+    <div class="status-right">
+        <span class="status-icon">📶</span>
+        <span class="status-icon">📡</span>
+        <span class="status-icon battery">
+            <span class="battery-body">
+            <span class="battery-level"></span>
+            </span>
+            <span class="battery-tip"></span>
+        </span>
+        <div class="theme-toggle">
+        <button type="button" id="theme-toggle-btn" aria-label="Toggle theme">
+        ☾
+        </button>
+    </div>
+      <div class="lang-toggle">
+        <button type="button" data-lang-switch="en" class="active">EN</button>
+        <button type="button" data-lang-switch="ja">日本語</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="shell">
+    <!-- ===== Screen 1: Lock Screen ===== -->
+    <section id="lock-screen" class="screen screen-lock">
+      <div class="lock-inner">
+        <div class="lock-time" id="lock-time">9:41</div>
+        <div class="lock-date" id="lock-date">
+          <!-- JSで上書きされる -->
+          <span data-lang="en">Tuesday, November 23</span>
+          <span data-lang="ja">11月23日 火曜日</span>
+        </div>
+        <div class="lock-owner">
+          <!-- 自国(?) → ロック画面のオーナー名的な位置にローマ字 -->
+          Yuya Harada
+        </div>
+        <div class="lock-hint">
+          <span data-lang="en">Swipe up to enter</span>
+          <span data-lang="ja">上にスワイプして開く</span>
+        </div>
+        <div class="lock-arrow">⌃</div>
+      </div>
+    </section>
+
+    <!-- ===== Screen 2: Home (Icons) ===== -->
+    <section id="home-screen" class="screen screen-home">
+      <div class="home-inner">
+        <div class="home-header">
+          <span class="home-title" data-lang="en">Home</span>
+          <span class="home-title" data-lang="ja">ホーム</span>
+        </div>
+        <div class="icon-grid">
+          <!-- About -->
+          <a class="icon-card app-link" href="/about/">
+            <div class="icon-emoji">👤</div>
+            <div class="icon-title">
+              <span data-lang="en">About</span>
+              <span data-lang="ja">自己紹介</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">Profile</span>
+              <span data-lang="ja">プロフィール</span>
+            </div>
+          </a>
+
+          <!-- Research -->
+          <a class="icon-card app-link" href="/research/">
+            <div class="icon-emoji">🧪</div>
+            <div class="icon-title">
+              <span data-lang="en">Research</span>
+              <span data-lang="ja">研究</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">AIWolf &amp; NLP</span>
+              <span data-lang="ja">AIWolf / NLP</span>
+            </div>
+          </a>
+
+          <!-- Publications -->
+          <a class="icon-card app-link" href="/publications/">
+            <div class="icon-emoji">📄</div>
+            <div class="icon-title">
+              <span data-lang="en">Papers</span>
+              <span data-lang="ja">論文</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">Publications</span>
+              <span data-lang="ja">Publications</span>
+            </div>
+          </a>
+
+          <!-- Experience -->
+          <a class="icon-card app-link" href="/experience/">
+            <div class="icon-emoji">🧑‍💼</div>
+            <div class="icon-title">
+              <span data-lang="en">Experience</span>
+              <span data-lang="ja">経験</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">AIWolf Contest</span>
+              <span data-lang="ja">AIWolf Contest</span>
+            </div>
+          </a>
+
+          <!-- Projects -->
+          <a class="icon-card app-link" href="/projects/">
+            <div class="icon-emoji">💻</div>
+            <div class="icon-title">
+              <span data-lang="en">Projects</span>
+              <span data-lang="ja">プロジェクト</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">GitHub</span>
+              <span data-lang="ja">GitHub</span>
+            </div>
+          </a>
+
+          <!-- Blog -->
+          <a class="icon-card app-link" href="/blog/">
+            <div class="icon-emoji">✏️</div>
+            <div class="icon-title">
+              <span data-lang="en">Blog</span>
+              <span data-lang="ja">ブログ</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">Articles</span>
+              <span data-lang="ja">記事一覧</span>
+            </div>
+          </a>
+
+          <!-- Contact -->
+          <a class="icon-card app-link" href="/contact/">
+            <div class="icon-emoji">📮</div>
+            <div class="icon-title">
+              <span data-lang="en">Contact</span>
+              <span data-lang="ja">連絡先</span>
+            </div>
+            <div class="icon-sub">
+              <span data-lang="en">Get in touch</span>
+              <span data-lang="ja">お問い合わせ</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Dock -->
+        <div class="dock">
+          <a class="icon-card small app-link" href="https://github.com/iggy157" target="_blank" rel="noreferrer">
+            <div class="icon-emoji">🐙</div>
+            <div class="icon-title">GitHub</div>
+          </a>
+          <a class="icon-card small app-link" href="mailto:yharada@kanolab.net">
+            <div class="icon-emoji">✉️</div>
+            <div class="icon-title">
+              <span data-lang="en">Mail</span>
+              <span data-lang="ja">メール</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Screen 3: Overview / Simple intro ===== -->
+    <section id="overview-screen" class="screen screen-overview">
+      <div class="home">
+        <header class="hero">
+          <div class="hero-main">
+            <h1 class="hero-name">
+              <span data-lang="en">Yuya Harada</span>
+              <span data-lang="ja">原田 悠矢</span>
+            </h1>
+            <p class="hero-tagline">
+              <span data-lang="en">
+                NLP &amp; AIWolf researcher / Kano Lab, Shizuoka University
+              </span>
+              <span data-lang="ja">
+                NLP / AIWolf 研究（静岡大学 狩野研究室）
+              </span>
+            </p>
+            <p class="hero-sub">
+              <span data-lang="en">
+                Exploring natural-language-based Werewolf agents, dialogue systems, and
+                long-context reasoning in competitive social settings.
+              </span>
+              <span data-lang="ja">
+                自然言語ベースの人狼エージェントや対話システムを通して、長期文脈推論や
+                駆け引き・協調・欺瞞といった社会的なやり取りを研究しています。
+              </span>
+            </p>
+          </div>
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span class="label" data-lang="en">Affiliation</span>
+              <span class="label" data-lang="ja">所属</span>
+              <span class="value" data-lang="en">Kano Laboratory, Shizuoka University</span>
+              <span class="value" data-lang="ja">静岡大学 情報学部 狩野研究室</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="label" data-lang="en">Focus</span>
+              <span class="label" data-lang="ja">研究分野</span>
+              <span class="value" data-lang="en">NLP, AIWolf, Dialogue Systems</span>
+              <span class="value" data-lang="ja">自然言語処理、AIWolf、対話システム</span>
+            </div>
+            <div class="hero-meta-item">
+              <span class="label" data-lang="en">Email</span>
+              <span class="label" data-lang="ja">メール</span>
+              <span class="value">
+                <a href="mailto:yharada@kanolab.net">yharada@kanolab.net</a>
+              </span>
+            </div>
+          </div>
+        </header>
+
+        <section class="section">
+          <h2 class="section-title">
+            <span data-lang="en">What this site contains</span>
+            <span data-lang="ja">このサイトで見られるもの</span>
+          </h2>
+          <div class="section-body two-col">
+            <div class="card">
+              <h3>
+                <span data-lang="en">Research &amp; Papers</span>
+                <span data-lang="ja">研究内容・論文</span>
+              </h3>
+              <p data-lang="en">
+                Details on my AIWolf agents, issues in natural-language-based Werewolf games,
+                and approaches such as hierarchical BDI architectures and commitment tracking.
+              </p>
+              <p data-lang="ja">
+                AI 人狼エージェントの設計、自然言語人狼における課題、階層型 BDI や
+                コミットメントトラッキングを用いたアプローチなどを詳しくまとめています。
+              </p>
+              <p>
+                <a href="/research/">
+                  <span data-lang="en">Go to Research page →</span>
+                  <span data-lang="ja">研究ページへ →</span>
+                </a>
+              </p>
+            </div>
+            <div class="card">
+              <h3>
+                <span data-lang="en">Projects &amp; Work</span>
+                <span data-lang="ja">プロジェクト・実務</span>
+              </h3>
+              <p data-lang="en">
+                Organizing the AI Wolf Contest, managing servers, and developing tools related
+                to evaluation and analysis, as well as open-source projects on GitHub.
+              </p>
+              <p data-lang="ja">
+                AI 人狼コンテストの運営、サーバ管理や結果分析ツールの開発、
+                GitHub 上で公開しているコードなどを紹介しています。
+              </p>
+              <p>
+                <a href="/projects/">
+                  <span data-lang="en">Go to Projects page →</span>
+                  <span data-lang="ja">プロジェクト一覧へ →</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Scroll to top (home) ボタン -->
+    <button class="to-top" aria-label="Scroll to top">⌃</button>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

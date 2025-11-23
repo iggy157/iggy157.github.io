@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Yuya Harada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="lang-en theme-dark">
+  <div class="status-bar">
+    <div class="status-left">
+      <span id="status-time">9:41</span>
+    </div>
+    <div class="status-center">
+      <span data-lang="en">Projects</span>
+      <span data-lang="ja">プロジェクト</span>
+    </div>
+    <div class="status-right">
+        <span class="status-icon">📶</span>
+        <span class="status-icon">📡</span>
+        <span class="status-icon battery">
+            <span class="battery-body">
+            <span class="battery-level"></span>
+            </span>
+            <span class="battery-tip"></span>
+        </span>
+        <div class="theme-toggle">
+        <button type="button" id="theme-toggle-btn" aria-label="Toggle theme">
+        ☾
+        </button>
+    </div>
+      <div class="lang-toggle">
+        <button type="button" data-lang-switch="en" class="active">EN</button>
+        <button type="button" data-lang-switch="ja">日本語</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="screen screen-overview">
+    <div class="home">
+      <header class="hero">
+        <div class="hero-main">
+          <h1 class="hero-name">
+            <span data-lang="en">Projects</span>
+            <span data-lang="ja">プロジェクト</span>
+          </h1>
+          <p class="hero-tagline">
+            <span data-lang="en">Open-source work and experimental agents for AIWolf.</span>
+            <span data-lang="ja">AI 人狼エージェントや周辺ツールなどの開発。</span>
+          </p>
+          <p class="hero-sub">
+            <span data-lang="en">
+              Most of my code is available on GitHub, including AIWolf-related projects
+              and utilities for analysis and evaluation.
+            </span>
+            <span data-lang="ja">
+              主に GitHub 上で、AIWolf 関連プロジェクトや解析・評価のためのユーティリティ等を公開しています。
+            </span>
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="label">GitHub</span>
+            <span class="value">
+              <a href="https://github.com/iggy157" target="_blank" rel="noreferrer">
+                github.com/iggy157
+              </a>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">
+          <span data-lang="en">Repository overview</span>
+          <span data-lang="ja">リポジトリ概要</span>
+        </h2>
+        <div class="section-body">
+          <article class="card">
+            <p data-lang="en">
+              For now, please refer to my GitHub profile for the full list of repositories.
+              I mainly work on:
+            </p>
+            <p data-lang="ja">
+              現時点では、リポジトリの全一覧は GitHub プロフィールを参照してください。主に以下のようなものを扱っています。
+            </p>
+            <ul data-lang="en">
+              <li>AIWolf agents and simulation code</li>
+              <li>Log analysis and visualization tools</li>
+              <li>Experiments with dialogue models and long-context reasoning</li>
+            </ul>
+            <ul data-lang="ja">
+              <li>AI 人狼エージェントおよびシミュレーションコード</li>
+              <li>ログ解析・可視化ツール</li>
+              <li>対話モデルや長文脈推論に関する実験的実装</li>
+            </ul>
+            <p>
+              <a href="https://github.com/iggy157" target="_blank" rel="noreferrer">
+                github.com/iggy157 →
+              </a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-home-button">
+        <a
+            href="/#home-screen"
+            class="home-button"
+            aria-label="Back to home screen"
+        ></a>
+      </section>
+    </div>
+
+    <button class="to-top" aria-label="Scroll to top">⌃</button>
+  </main>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
