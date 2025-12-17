@@ -10,8 +10,8 @@
   - 各ページの front matter の title / description を優先
   - なければデフォルトのポートフォリオ用文言を使う
   {%- endcomment -%}
-  {% assign meta_title = page.title | default: "原田悠矢 | NLP / AI 人狼(AIWolf)・自然言語処理 ポートフォリオ" %}
-  {% assign meta_description = page.description | default: site.description | default: "原田悠矢（はらだ ゆうや）のポートフォリオサイト。静岡大学 情報学部 狩野研究室で自然言語処理（NLP）・AI 人狼（AIWolf）・対話システムの研究を行っています。" %}
+  {% assign meta_title = page.title | default: "原田悠矢 | NLP / 人狼知能(AIWolf)・自然言語処理 ポートフォリオ" %}
+  {% assign meta_description = page.description | default: site.description | default: "原田悠矢（はらだ ゆうや）のポートフォリオサイト。静岡大学 情報学部 狩野研究室で自然言語処理（NLP）・人狼知能（AIWolf）・対話システムの研究を行っています。" %}
 
   <title>{{ meta_title }}</title>
   <meta name="description" content="{{ meta_description | escape }}" />
