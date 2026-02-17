@@ -255,3 +255,90 @@ async function loadPosts(lang) {
 // ブログページにいる場合のみ発火（要素があれば読み込み）
 loadPosts('en');
 loadPosts('ja');
+
+// ===== Favorites page (filter + "now") =====
+(function initFavorites() {
+  const root = document.querySelector('.favorites-page');
+  if (!root) return;
+
+  const search   = document.getElementById('favorite-search');
+  const rows     = Array.from(root.querySelectorAll('[data-fav-row]'));
+  const nowBar   = document.getElementById('favorite-now-bar');
+  const nowEl    = document.getElementById('favorite-now');
+  const sections = Array.from(root.querySelectorAll('.fav-section'));
+
+  let playing = null;
+
+  // ── "Now" 表示 ──
+  function setPlaying(row) {
+    if (playing) playing.classList.remove('is-playing');
+    playing = row;
+    if (!playing) {
+      if (nowBar) nowBar.style.display = 'none';
+      return;
+    }
+
+    playing.classList.add('is-playing');
+
+    // .fav-name は既存JSとの互換用クラス
+    const title = (
+      playing.querySelector('.fav-card__name') ||
+      playing.querySelector('.fav-name')
+    )?.textContent?.trim() || '';
+
+    const sec = playing.closest('.fav-section') || playing.closest('section');
+    const cat = sec ? (sec.querySelector('h2')?.textContent?.trim() || '') : '';
+
+    if (nowEl) nowEl.textContent = cat ? `${title} · ${cat}` : title;
+    if (nowBar) nowBar.style.display = 'flex';
+
+    if (playing.id) history.replaceState(null, '', `#${playing.id}`);
+  }
+
+  // カードクリック（リンクカード以外は "now" 選択）
+  rows.forEach((r) => {
+    if (!r.classList.contains('fav-card--link')) {
+      r.style.cursor = 'pointer';
+      r.addEventListener('click', () => setPlaying(r));
+    }
+  });
+
+  // ── 検索フィルター ──
+  if (search) {
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+
+      rows.forEach((r) => {
+        const hay = (r.getAttribute('data-search') || r.textContent || '').toLowerCase();
+        r.style.display = hay.includes(q) ? '' : 'none';
+      });
+
+      // セクション内の全カード非表示 → セクションごと非表示
+      sections.forEach((sec) => {
+        const visible = sec.querySelectorAll('[data-fav-row]:not([style*="display: none"])');
+        sec.style.display = visible.length === 0 ? 'none' : '';
+      });
+    });
+  }
+
+  // ── URLハッシュで初期選択 ──
+  if (location.hash) {
+    const el = document.getElementById(location.hash.slice(1));
+    if (el && el.hasAttribute('data-fav-row')) {
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setPlaying(el);
+      }, 400);
+    }
+  }
+
+  // ── 横スクロール: マウスホイールで横に送る (PC向け) ──
+  root.querySelectorAll('.fav-scroll__track').forEach((track) => {
+    track.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        track.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  });
+})();

@@ -1,0 +1,433 @@
+/* ============================================================
+   FAVORITES PAGE — favorites.css
+   
+   既存の style.css にある .favorites-page 関連のルールを
+   すべて削除してから、このファイルを追加読み込みするか、
+   style.css の末尾に追記してください。
+   
+   ※ style.css 内の「===== Favorites page =====」コメント以降の
+     ルールをすべてこのファイルの内容で置き換えてください。
+   ============================================================ */
+
+/* ── Category accent colors ── */
+:root {
+  --fav-music:     #1db954;
+  --fav-fragrance: #c4a882;
+  --fav-anime:     #e85d75;
+  --fav-animal:    #7ec4a5;
+  --fav-food:      #e8a852;
+  --fav-hobby:     #7b8fe8;
+  --fav-spot:      #d47ecf;
+}
+
+
+/* ══════════════════════════════════════════════
+   PAGE LAYOUT
+   ══════════════════════════════════════════════ */
+.favorites-page {
+  padding-top: 40px; /* status bar */
+}
+
+.favorites-page .home {
+  /* 既存の .home を再利用 */
+  width: min(920px, 100%);
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+
+/* ══════════════════════════════════════════════
+   HEADER
+   ══════════════════════════════════════════════ */
+.fav-header {
+  margin-bottom: 40px;
+  animation: favFadeUp 0.7s ease-out both;
+}
+
+.fav-header__label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.35;
+  margin: 0 0 10px;
+}
+
+.fav-header__title {
+  font-size: clamp(28px, 5.5vw, 40px);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+
+.fav-header__sub {
+  font-size: 13px;
+  opacity: 0.35;
+  margin: 10px 0 0;
+  line-height: 1.65;
+}
+
+.fav-header__rule {
+  width: 48px;
+  height: 2px;
+  background: currentColor;
+  opacity: 0.08;
+  margin-top: 22px;
+}
+
+
+/* ══════════════════════════════════════════════
+   SEARCH
+   ══════════════════════════════════════════════ */
+.fav-search-wrap {
+  margin-bottom: 28px;
+  animation: favFadeUp 0.6s ease-out 0.06s both;
+}
+
+.favorites-page .fav-search {
+  /* 既存の .fav-search を上書き */
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(2, 6, 23, 0.45);
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.favorites-page .fav-search::placeholder {
+  opacity: 0.35;
+}
+
+.favorites-page .fav-search:focus {
+  border-color: rgba(148, 163, 184, 0.6);
+  box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.08);
+}
+
+/* ライトテーマ */
+body.theme-light .favorites-page .fav-search {
+  border-color: rgba(148, 163, 184, 0.5);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+body.theme-light .favorites-page .fav-search:focus {
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* ══════════════════════════════════════════════
+   "NOW" BAR
+   ══════════════════════════════════════════════ */
+.favorites-page .fav-now {
+  /* 既存の .fav-now を上書き */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  font-size: 12px;
+  opacity: 0.6;
+  background: rgba(2, 6, 23, 0.35);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.fav-now__icon {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.fav-now__text {
+  opacity: 0.9;
+}
+
+body.theme-light .favorites-page .fav-now {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(148, 163, 184, 0.4);
+}
+
+
+/* ══════════════════════════════════════════════
+   SECTION (category row)
+   ══════════════════════════════════════════════ */
+.favorites-page .fav-section {
+  /* 既存の .fav-section を上書き */
+  margin-top: 0;
+  margin-bottom: 42px;
+}
+
+.favorites-page .fav-section:nth-of-type(n) {
+  animation: favFadeUp 0.55s ease-out both;
+}
+.favorites-page .fav-section:nth-of-type(1) { animation-delay: 0.10s; }
+.favorites-page .fav-section:nth-of-type(2) { animation-delay: 0.15s; }
+.favorites-page .fav-section:nth-of-type(3) { animation-delay: 0.20s; }
+.favorites-page .fav-section:nth-of-type(4) { animation-delay: 0.25s; }
+.favorites-page .fav-section:nth-of-type(5) { animation-delay: 0.30s; }
+.favorites-page .fav-section:nth-of-type(6) { animation-delay: 0.35s; }
+.favorites-page .fav-section:nth-of-type(7) { animation-delay: 0.40s; }
+
+.fav-section__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.fav-section__icon {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.fav-section__head h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.fav-section__count {
+  font-size: 11px;
+  opacity: 0.25;
+}
+
+
+/* ══════════════════════════════════════════════
+   HORIZONTAL SCROLL CONTAINER
+   ══════════════════════════════════════════════ */
+.fav-scroll {
+  position: relative;
+  margin-left: -6px;
+  margin-right: -6px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.fav-scroll__track {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+
+  /* スクロールバー非表示 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fav-scroll__track::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ══════════════════════════════════════════════
+   CARD
+   ══════════════════════════════════════════════ */
+.fav-card {
+  flex: 0 0 auto;
+  width: 210px;
+  min-height: 148px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  /* 既存サイトのカードに合わせたスタイル */
+  background: rgba(15, 23, 42, 0.92);
+  border: none;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(148, 163, 184, 0.25) inset;
+
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+
+  transition:
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s,
+    box-shadow 0.25s,
+    filter 0.2s;
+}
+
+.fav-card--link {
+  cursor: pointer;
+}
+
+/* ── Hover ── */
+.fav-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow:
+    0 14px 36px rgba(0, 0, 0, 0.8),
+    0 0 0 1px color-mix(in srgb, var(--accent) 40%, rgba(148, 163, 184, 0.3)) inset;
+  filter: brightness(1.04);
+}
+
+/* ── 選択中 (is-playing) ── */
+.fav-card.is-playing {
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.7),
+    0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent) inset;
+  background: rgba(15, 23, 42, 0.98);
+}
+
+/* ── Badge (official ↗ / tabelog ↗) ── */
+.fav-card__badge {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 10px;
+  color: var(--accent);
+  opacity: 0.3;
+  letter-spacing: 0.04em;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.fav-card:hover .fav-card__badge {
+  opacity: 0.85;
+}
+
+/* ── Emoji ── */
+.fav-card__emoji {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  font-size: 26px;
+  opacity: 0.6;
+  filter: grayscale(0.15);
+  pointer-events: none;
+}
+
+/* ── Name / Sub ── */
+.fav-card__body {
+  flex: 1;
+}
+
+.fav-card__name,
+.fav-card .fav-name {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 5px;
+  max-width: 78%;
+  word-break: break-word;
+}
+
+.fav-card__sub {
+  font-size: 11px;
+  opacity: 0.4;
+  letter-spacing: 0.03em;
+}
+
+/* ── Accent bar ── */
+.fav-card__bar {
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--accent) 28%, transparent);
+  transition: background 0.3s, width 0.3s;
+}
+
+.fav-card:hover .fav-card__bar {
+  background: var(--accent);
+  width: 34px;
+}
+
+/* ── is-playing カード名のアクセント色 ── */
+.fav-card.is-playing .fav-card__name {
+  color: color-mix(in srgb, var(--accent) 80%, #f9fafb);
+}
+
+
+/* ══════════════════════════════════════════════
+   LIGHT THEME
+   ══════════════════════════════════════════════ */
+body.theme-light .fav-card {
+  background: #ffffff;
+  box-shadow:
+    0 8px 22px rgba(148, 163, 184, 0.4),
+    0 0 0 1px rgba(209, 213, 219, 0.8) inset;
+}
+
+body.theme-light .fav-card:hover {
+  box-shadow:
+    0 14px 36px rgba(148, 163, 184, 0.55),
+    0 0 0 1px color-mix(in srgb, var(--accent) 35%, rgba(209, 213, 219, 0.6)) inset;
+  filter: brightness(1.0);
+}
+
+body.theme-light .fav-card.is-playing {
+  background: #fefefe;
+  box-shadow:
+    0 10px 28px rgba(148, 163, 184, 0.45),
+    0 0 0 1px color-mix(in srgb, var(--accent) 45%, rgba(209, 213, 219, 0.6)) inset;
+}
+
+body.theme-light .fav-card.is-playing .fav-card__name {
+  color: color-mix(in srgb, var(--accent) 85%, #111827);
+}
+
+body.theme-light .fav-header__rule {
+  opacity: 0.12;
+}
+
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════════ */
+@media (max-width: 720px) {
+  .favorites-page .home {
+    padding-top: 40px;
+  }
+
+  .fav-card {
+    width: 185px;
+    min-height: 138px;
+    padding: 16px 16px;
+    border-radius: 18px;
+  }
+
+  .fav-card__name {
+    font-size: 14px;
+  }
+
+  .fav-card__emoji {
+    font-size: 22px;
+  }
+
+  .fav-section__head h2 {
+    font-size: 18px;
+  }
+
+  .favorites-page .fav-section {
+    margin-bottom: 32px;
+  }
+}
+
+
+/* ══════════════════════════════════════════════
+   ANIMATION
+   ══════════════════════════════════════════════ */
+@keyframes favFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
