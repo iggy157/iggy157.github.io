@@ -1,0 +1,75 @@
+# ホーム画面のアイコングリッドと Dock（日本語）。英語は _data/en/home.yml
+# アプリを追加・並べ替えするときはこのリストを編集する（両言語のファイルを揃えること）。
+
+apps:
+  - href: "/about/"
+    img: "/assets/img/about.png"
+    alt: "About icon"
+    title: "自己紹介"
+    sub: "プロフィール"
+
+  - href: "/research/"
+    img: "/assets/img/research.png"
+    alt: "Research icon"
+    title: "研究"
+    sub: "多人数対話"
+
+  - href: "/publications/"
+    img: "/assets/img/papers.png"
+    alt: "Papers icon"
+    title: "論文"
+    sub: "Publications"
+
+  - href: "/experience/"
+    img: "/assets/img/experience.png"
+    alt: "Experience icon"
+    title: "経験"
+    sub: "大会運営・発表・TA"
+
+  - href: "/projects/"
+    img: "/assets/img/projects.png"
+    alt: "Projects icon"
+    title: "プロジェクト"
+    sub: "GitHub"
+
+  - href: "/blog/"
+    img: "/assets/img/blog.png"
+    alt: "Blog icon"
+    title: "ブログ"
+    sub: "記事一覧"
+
+  - href: "/favorites/"
+    img: "/assets/img/hobby.png"
+    alt: "Hobby icon"
+    title: "趣味"
+    sub: "好きなもの"
+
+  - href: "/contact/"
+    img: "/assets/img/contact.png"
+    alt: "Contact icon"
+    title: "連絡先"
+    sub: "お問い合わせ"
+
+dock:
+  - href: "https://github.com/iggy157"
+    img: "/assets/img/github.png"
+    alt: "GitHub icon"
+    title: "GitHub"
+    external: true
+
+  - href: "https://bravebird0914.github.io/lontra-blog/"
+    img: "/assets/img/lontra.png"
+    alt: "Lontra icon"
+    title: "lontra"
+    external: true
+
+  - href: "https://aiwolfdial.github.io/aiwolf-nlp/"
+    img: "/assets/img/aiwolf.png"
+    alt: "AIWolf icon"
+    title: "AIWolf"
+    external: true
+
+  - href: "mailto:yharada@kanolab.net"
+    img: "/assets/img/mail.png"
+    alt: "Mail icon"
+    title: "メール"

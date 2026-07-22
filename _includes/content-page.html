@@ -1,0 +1,77 @@
+{%- comment -%}
+  汎用ページレンダラー。
+  _data/en/<page>.yml と _data/ja/<page>.yml を読み、
+  言語ごとに .home ブロックを丸ごと出力して data-lang で切り替える。
+
+  使い方:  {% include content-page.html page="about" %}
+
+  データのスキーマ:
+    hero:
+      title / tagline / intro / sub : 文字列（プレーンテキスト）
+      meta:                         : ラベルと値のリスト（値は Markdown 可）
+    sections:
+      - title    : セクション見出し
+        two_col  : true で 2 カラム
+        cards:
+          - heading : カードの h3（省略可）
+            info    : ラベル/値リスト（dl 表示、値は Markdown 可）
+            body    : Markdown 本文（段落・箇条書き・リンク可）
+{%- endcomment -%}
+{%- assign langs = "en,ja" | split: "," -%}
+{%- for lang in langs -%}
+{%- assign d = site.data[lang][include.page] -%}
+<div class="home" data-lang="{{ lang }}">
+  <header class="hero">
+    <div class="hero-main">
+      <h1 class="hero-name">{{ d.hero.title | escape }}</h1>
+      {%- if d.hero.tagline %}
+      <p class="hero-tagline">{{ d.hero.tagline | escape }}</p>
+      {%- endif %}
+      {%- if d.hero.intro %}
+      <p class="hero-intro">{{ d.hero.intro | escape }}</p>
+      {%- endif %}
+      {%- if d.hero.sub %}
+      <p class="hero-sub">{{ d.hero.sub | escape }}</p>
+      {%- endif %}
+    </div>
+    {%- if d.hero.meta %}
+    <div class="hero-meta">
+      {%- for m in d.hero.meta %}
+      <div class="hero-meta-item">
+        <span class="label">{{ m.label | escape }}</span>
+        <span class="value">{{ m.value | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</span>
+      </div>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </header>
+
+  {%- for sec in d.sections %}
+  <section class="section">
+    <h2 class="section-title">{{ sec.title | escape }}</h2>
+    <div class="section-body{% if sec.two_col %} two-col{% endif %}">
+      {%- for card in sec.cards %}
+      <article class="card">
+        {%- if card.heading %}
+        <h3>{{ card.heading | escape }}</h3>
+        {%- endif %}
+        {%- if card.info %}
+        <dl class="info-list">
+          {%- for row in card.info %}
+          <div>
+            <dt>{{ row.label | escape }}</dt>
+            <dd>{{ row.value | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</dd>
+          </div>
+          {%- endfor %}
+        </dl>
+        {%- endif %}
+        {%- if card.body %}
+        {{ card.body | markdownify }}
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+</div>
+{%- endfor -%}

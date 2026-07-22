@@ -1,0 +1,30 @@
+# /publications/ の日本語コンテンツ。英語は _data/en/publications.yml
+# 論文を追加するときは papers に 1 ブロック足すだけ（両言語のファイルに追加）。
+# 英語タイトルのまま公開している論文は英語のまま書いてよい。
+
+hero:
+  title: "論文一覧"
+  tagline: "人狼知能や対話システムに関連する論文などのリンクをこちらに掲載しています。"
+
+section_title: "論文"
+
+papers:
+  - venue: "JSAI 2026"
+    url: "https://pub.confit.atlas.jp/ja/event/jsai2026/presentation/1J4-GS-10k-01"
+    title: "LLM傾向性プロファイリング：マルチエージェント対話のための6軸評価フレームワーク"
+    authors: "原田悠矢, 狩野芳伸"
+    meta: "2026年度 人工知能学会全国大会（第40回）, 2026（1J4-GS-10k-01）"
+
+  - venue: "INLG2025 AIWolfDial 2025"
+    url: "https://aclanthology.org/2025.aiwolfdial-1.3/"
+    title: "Intent-driven AIWolf Agents with Hierarchical BDI Model and Personality"
+    authors: "Yuya Harada, Yoshinobu Kano"
+    meta: "第3回 International AIWolfDial Workshop, 2025（ACL Anthology: 2025.aiwolfdial-1.3）"
+
+  - venue: "INLG2025 AIWolfDial 2025"
+    url: "https://aclanthology.org/2025.aiwolfdial-1.1/"
+    title: "AIWolfDial 2025: Summary of Natural Language Division of 7th International AIWolf Contest"
+    authors: >-
+      Yoshinobu Kano, Neo Watanabe, Yuya Harada, Yuto Sahashi, Claus Aranha, Daisuke Katagami,
+      Kei Harada, Michimasa Inaba, Takeshi Ito, Hirotaka Osawa, Takashi Otsuki, Fujio Toriumi
+    meta: "第3回 International AIWolfDial Workshop, 2025（ACL Anthology: 2025.aiwolfdial-1.1）"

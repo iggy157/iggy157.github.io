@@ -52,6 +52,16 @@
     <button class="to-top" aria-label="Scroll to top">⌃</button>
   </main>
 
+  {%- comment -%}
+  iPhone 風ホームインジケーター。タップでホーム画面に戻る。
+  ホーム画面では飾りとして表示だけする（is-home でタップ無効）。
+  {%- endcomment -%}
+  <a
+    href="/#home-screen"
+    class="home-indicator{% if page.url == '/' %} is-home{% endif %}"
+    aria-label="Back to home screen"
+  ><span></span></a>
+
   <script src="/assets/js/main.js"></script>
 </body>
 </html>

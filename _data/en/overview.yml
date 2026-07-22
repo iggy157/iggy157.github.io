@@ -1,0 +1,38 @@
+# トップページ 3 画面目（概要セクション）の英語コンテンツ。日本語は _data/ja/overview.yml
+
+hero:
+  title: "Yuya Harada"
+  tagline: "Multi-party dialogue with LLM agents / Kano Lab, Shizuoka University"
+  intro: >-
+    This is the portfolio site of Yuya Harada, a student researcher at Kano Laboratory,
+    Shizuoka University, working on multi-party dialogue among LLM agents, with the
+    Werewolf game (AIWolf) as a testbed, as well as organizing the AI Wolf Contest.
+  sub: >-
+    Building agents with personality and intention models, improving the
+    multi-agent discussion process, and profiling LLM behavior for evaluation.
+  meta:
+    - label: "Affiliation"
+      value: "Kano Laboratory, Shizuoka University"
+    - label: "Focus"
+      value: "Multi-agent dialogue, LLM agents, NLP"
+    - label: "Email"
+      value: "[yharada@kanolab.net](mailto:yharada@kanolab.net)"
+
+sections:
+  - title: "What this site contains"
+    two_col: true
+    cards:
+      - heading: "Research & Papers"
+        body: |-
+          Multi-party dialogue among LLM agents: personality-driven hierarchical BDI
+          agents, improving the discussion process, and 6-axis tendency profiling of
+          LLMs for model selection.
+
+          [Go to Research page →](/research/)
+
+      - heading: "Projects & Work"
+        body: |-
+          Organizing the AI Wolf Contest, managing servers, and developing tools related
+          to evaluation and analysis, as well as open-source projects on GitHub.
+
+          [Go to Projects page →](/projects/)

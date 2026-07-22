@@ -1,83 +1,14 @@
 ---
 layout: base
-title: "活動・経験 | 原田悠矢 - 人狼知能コンテスト運営など"
-description: "人狼知能コンテストの運営、サーバ管理や結果分析ツールの開発、インターンシップやアルバイト、TA など、原田悠矢の主な活動・実務経験をまとめたページです。"
+title: "活動・経験 | 原田悠矢 - コンテスト運営・学会発表・TA"
+description: "人狼知能コンテストの運営、INLG・JSAI・NLP でのワークショップ発表やデモ実演、大学での TA（先端情報学実習・データ処理プログラミング）など、原田悠矢の主な活動・経験をまとめたページです。"
 status_label_en: "Experience"
 status_label_ja: "経験"
 main_class: "screen screen-overview"
 html_lang: "ja"
 ---
 
-<div class="home">
-  <header class="hero">
-    <div class="hero-main">
-      <h1 class="hero-name">
-        <span data-lang="en">Work Experience</span>
-        <span data-lang="ja">実務経験</span>
-      </h1>
-      <p class="hero-tagline">
-        <span data-lang="en">Organization and operation of the AI Wolf Contest.</span>
-        <span data-lang="ja">人狼知能コンテストの運営・技術的サポート。</span>
-      </p>
-      <p class="hero-sub">
-        <span data-lang="en">
-          Handling server operations, communication with participants,
-          workshop preparation, analysis, and related development.
-        </span>
-        <span data-lang="ja">
-          サーバ運用、参加者対応、ワークショップ準備、結果分析、関連コード開発などを担当。
-        </span>
-      </p>
-    </div>
-    <div class="hero-meta">
-      <div class="hero-meta-item">
-        <span class="label" data-lang="en">Role</span>
-        <span class="label" data-lang="ja">役割</span>
-        <span class="value">Local Organizer, AI Wolf Contest</span>
-      </div>
-    </div>
-  </header>
-
-  <section class="section">
-    <h2 class="section-title">
-      <span data-lang="en">AI Wolf Contest</span>
-      <span data-lang="ja">AI Wolf Contest</span>
-    </h2>
-    <div class="section-body">
-      <article class="card">
-        <h3>
-          <span data-lang="en">Local Organizer</span>
-          <span data-lang="ja">ローカルオーガナイザー</span>
-        </h3>
-        <p data-lang="en">
-          I serve as a local organizer for the AI Wolf Contest. My responsibilities include:
-        </p>
-        <p data-lang="ja">
-          人狼知能コンテストのローカルオーガナイザーとして、次のような業務を行っています。
-        </p>
-        <ul data-lang="en">
-          <li>Managing and operating the competition server</li>
-          <li>Communicating with participants</li>
-          <li>Preparing and running the workshop</li>
-          <li>Analyzing competition results and logs</li>
-          <li>Developing tools and code related to the contest</li>
-        </ul>
-        <ul data-lang="ja">
-          <li>コンテスト用サーバの管理・運用</li>
-          <li>参加チームとのコミュニケーション</li>
-          <li>ワークショップの準備・当日の運営</li>
-          <li>対戦結果やログの分析・可視化</li>
-          <li>評価や運営に関連するツール・コードの開発</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section section-home-button">
-    <a
-      href="/#home-screen"
-      class="home-button"
-      aria-label="Back to home screen"
-    ></a>
-  </section>
-</div>
+{%- comment -%}
+  中身は _data/en/experience.yml と _data/ja/experience.yml で管理。
+{%- endcomment -%}
+{% include content-page.html page="experience" %}

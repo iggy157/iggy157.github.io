@@ -1,84 +1,94 @@
 ---
 layout: base
 title: "プロジェクト | 原田悠矢 - GitHub / 人狼知能エージェントなど"
-description: "人狼知能エージェントや自然言語処理関連ツール、研究用ライブラリなど、原田悠矢が GitHub 上で公開している主なプロジェクトを紹介します。"
+description: "人狼知能エージェントや自然言語処理関連ツール、研究用ライブラリなど、原田悠矢が GitHub 上で公開している主なプロジェクトを紹介します。公開リポジトリの一覧は GitHub から自動取得しています。"
 status_label_en: "Projects"
 status_label_ja: "プロジェクト"
 main_class: "screen screen-overview"
 html_lang: "ja"
 ---
 
-<div class="home">
+{%- comment -%}
+  見出し・概要カードは _data/en/projects.yml と _data/ja/projects.yml で管理。
+  「リポジトリ一覧」は GitHub Pages ビルド時に jekyll-github-metadata
+  （site.github.public_repositories）から自動生成される。
+  ローカルビルドでは site.github が無いため、代わりに repos.empty の文言を表示する。
+{%- endcomment -%}
+{%- assign langs = "en,ja" | split: "," -%}
+{%- for lang in langs -%}
+{%- assign d = site.data[lang].projects %}
+<div class="home" data-lang="{{ lang }}">
   <header class="hero">
     <div class="hero-main">
-      <h1 class="hero-name">
-        <span data-lang="en">Projects</span>
-        <span data-lang="ja">プロジェクト</span>
-      </h1>
-      <p class="hero-tagline">
-        <span data-lang="en">Open-source work and experimental agents for AIWolf.</span>
-        <span data-lang="ja">人狼知能エージェントや周辺ツールなどの開発。</span>
-      </p>
-      <p class="hero-sub">
-        <span data-lang="en">
-          Most of my code is available on GitHub, including AIWolf-related projects
-          and utilities for analysis and evaluation.
-        </span>
-        <span data-lang="ja">
-          主に GitHub 上で、AIWolf 関連プロジェクトや解析・評価のためのユーティリティ等を公開しています。
-        </span>
-      </p>
+      <h1 class="hero-name">{{ d.hero.title | escape }}</h1>
+      {%- if d.hero.tagline %}
+      <p class="hero-tagline">{{ d.hero.tagline | escape }}</p>
+      {%- endif %}
+      {%- if d.hero.sub %}
+      <p class="hero-sub">{{ d.hero.sub | escape }}</p>
+      {%- endif %}
     </div>
+    {%- if d.hero.meta %}
     <div class="hero-meta">
+      {%- for m in d.hero.meta %}
       <div class="hero-meta-item">
-        <span class="label">GitHub</span>
-        <span class="value">
-          <a href="https://github.com/iggy157" target="_blank" rel="noreferrer">
-            github.com/iggy157
-          </a>
-        </span>
+        <span class="label">{{ m.label | escape }}</span>
+        <span class="value">{{ m.value | markdownify | strip_newlines | remove: "<p>" | remove: "</p>" }}</span>
       </div>
+      {%- endfor %}
     </div>
+    {%- endif %}
   </header>
 
+  {%- for sec in d.sections %}
   <section class="section">
-    <h2 class="section-title">
-      <span data-lang="en">Repository overview</span>
-      <span data-lang="ja">リポジトリ概要</span>
-    </h2>
+    <h2 class="section-title">{{ sec.title | escape }}</h2>
+    <div class="section-body{% if sec.two_col %} two-col{% endif %}">
+      {%- for card in sec.cards %}
+      <article class="card">
+        {%- if card.heading %}
+        <h3>{{ card.heading | escape }}</h3>
+        {%- endif %}
+        {%- if card.body %}
+        {{ card.body | markdownify }}
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+
+  <section class="section">
+    <h2 class="section-title">{{ d.repos.title | escape }}</h2>
     <div class="section-body">
       <article class="card">
-        <p data-lang="en">
-          For now, please refer to my GitHub profile for the full list of repositories.
-          I mainly work on:
-        </p>
-        <p data-lang="ja">
-          現時点では、リポジトリの全一覧は GitHub プロフィールを参照してください。主に以下のようなものを扱っています。
-        </p>
-        <ul data-lang="en">
-          <li>AIWolf agents and simulation code</li>
-          <li>Log analysis and visualization tools</li>
-          <li>Experiments with dialogue models and long-context reasoning</li>
-        </ul>
-        <ul data-lang="ja">
-          <li>人狼知能エージェントおよびシミュレーションコード</li>
-          <li>ログ解析・可視化ツール</li>
-          <li>対話モデルや長文脈推論に関する実験的実装</li>
-        </ul>
-        <p>
-          <a href="https://github.com/iggy157" target="_blank" rel="noreferrer">
-            github.com/iggy157 →
-          </a>
-        </p>
+        {%- assign repos = site.github.public_repositories %}
+        {%- if repos and repos.size > 0 %}
+        <p class="muted">{{ d.repos.note | escape }}</p>
+        <div class="blog-list">
+          {%- assign sorted = repos | sort: "pushed_at" | reverse %}
+          {%- for r in sorted %}
+          {%- if r.fork or r.archived or r.name == "iggy157" or r.name == "iggy157.github.io" %}{% continue %}{% endif %}
+          <div class="blog-item">
+            <a class="blog-item-title" href="{{ r.html_url }}" target="_blank" rel="noreferrer">
+              {{- r.name -}}
+            </a>
+            {%- if r.description %}
+            <div>{{ r.description | escape }}</div>
+            {%- endif %}
+            <div class="blog-item-meta">
+              {%- if r.language %}{{ r.language }} · {% endif -%}
+              {%- if r.stargazers_count > 0 %}★{{ r.stargazers_count }} · {% endif -%}
+              Updated {{ r.pushed_at | date: "%Y-%m-%d" }}
+            </div>
+          </div>
+          {%- endfor %}
+        </div>
+        {%- else %}
+        <p class="muted">{{ d.repos.empty | escape }}</p>
+        {%- endif %}
       </article>
     </div>
   </section>
-
-  <section class="section section-home-button">
-    <a
-      href="/#home-screen"
-      class="home-button"
-      aria-label="Back to home screen"
-    ></a>
-  </section>
 </div>
+{%- endfor -%}

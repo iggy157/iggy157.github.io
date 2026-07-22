@@ -28,6 +28,7 @@ body.lang-ja [data-lang="en"] {
   min-height: 100vh;
   position: relative;
   padding-top: 40px; /* status bar 分 */
+  padding-bottom: 44px; /* home indicator 分 */
 }
 
 /* ===== Status bar ===== */
@@ -491,32 +492,75 @@ body.lang-ja [data-lang="en"] {
   margin-top: 4px;
 }
 
-/* ===== Home button (back to home screen) ===== */
-.section-home-button {
-  margin-top: 8px;
-  text-align: center;
+.pub-list .pub-item + .pub-item {
+  margin-top: 14px;
 }
 
-.home-button {
-  /* 横長ピル型ホームボタン */
-  width: 120px;
-  height: 48px;
+.pub-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.pub-venue {
+  align-self: flex-start;
+  padding: 1px 8px;
   border-radius: 999px;
-  border: 2px solid rgba(148, 163, 184, 0.9);
-  background: radial-gradient(circle at 30% 30%, #111827, #020617);
-  box-shadow:
-    0 6px 16px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(15, 23, 42, 0.9) inset;
-  cursor: pointer;
-  display: inline-block;
+  border: 1px solid rgba(96, 165, 250, 0.5);
+  background: rgba(30, 64, 175, 0.35);
+  font-size: 11px;
+  letter-spacing: 0.02em;
 }
 
-/* 押した感のアニメーション */
-.home-button:active {
-  transform: scale(0.96);
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.8),
-    0 0 0 1px rgba(15, 23, 42, 0.9) inset;
+.pub-title {
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.pub-meta {
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+/* ===== Home indicator (back to home screen) ===== */
+.home-indicator {
+  /* iPhone X 以降の画面下ホームインジケーター。バー本体は中の span */
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px 28px 9px; /* タップ領域をバーより広く取る */
+  display: flex;
+  z-index: 40;
+}
+
+.home-indicator span {
+  width: 134px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(248, 250, 252, 0.55);
+  transition:
+    background 0.16s ease-out,
+    transform 0.16s ease-out;
+}
+
+.home-indicator:hover span {
+  background: rgba(248, 250, 252, 0.95);
+}
+
+.home-indicator:active span {
+  transform: scaleX(0.92);
+}
+
+/* ホーム画面では飾り（タップしても何も起きない） */
+.home-indicator.is-home {
+  pointer-events: none;
 }
 
 /* ===== Blog list ===== */
@@ -561,7 +605,7 @@ a:hover {
 .to-top {
   position: fixed;
   right: 16px;
-  bottom: 16px;
+  bottom: 34px;
   width: 32px;
   height: 32px;
   border-radius: 999px;
@@ -682,13 +726,13 @@ body.theme-light .card {
     0 0 0 1px rgba(209, 213, 219, 0.9) inset;
 }
 
-/* ホームボタン（ライトテーマ） */
-body.theme-light .home-button {
-  background: radial-gradient(circle at 30% 30%, #f9fafb, #e5e7eb);
-  border-color: rgba(148, 163, 184, 0.9);
-  box-shadow:
-    0 6px 16px rgba(148, 163, 184, 0.7),
-    0 0 0 1px rgba(209, 213, 219, 0.9) inset;
+/* ホームインジケーター（ライトテーマ） */
+body.theme-light .home-indicator span {
+  background: rgba(15, 23, 42, 0.45);
+}
+
+body.theme-light .home-indicator:hover span {
+  background: rgba(15, 23, 42, 0.85);
 }
 
 /* リンク色 */
@@ -731,8 +775,7 @@ body.theme-light .to-top {
     padding: 2px 4px;
   }
 
-  .home-button {
-    width: 96px;
-    height: 40px;
+  .home-indicator span {
+    width: 112px;
   }
 }

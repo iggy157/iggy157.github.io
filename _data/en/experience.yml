@@ -1,0 +1,53 @@
+# /experience/ の英語コンテンツ。日本語は _data/ja/experience.yml
+
+hero:
+  title: "Experience"
+  tagline: "Contest organizing, conference presentations, and teaching."
+  sub: >-
+    Organizing the international AI Wolf Contest, presenting at conferences
+    and workshops, and teaching NLP and programming as a teaching assistant.
+  meta:
+    - label: "Roles"
+      value: "Local Organizer, AI Wolf Contest / Teaching Assistant"
+
+sections:
+  - title: "AI Wolf Contest"
+    cards:
+      - heading: "Local Organizer"
+        body: |-
+          I serve as a local organizer for the international AI Wolf Contest
+          (natural language division), including AIWolfDial 2025 held with INLG
+          2025, and co-authored the official contest summary paper. My
+          responsibilities include:
+
+          - Managing and operating the competition server
+          - Communicating with participants
+          - Preparing and running the workshop
+          - Analyzing competition results and logs (win rates, human subjective evaluation, and LLM-as-a-judge)
+          - Developing tools and code related to the contest
+          - Running live demonstrations of the Werewolf game at the AIWolfDial
+            workshops held with NLP2026 (the Annual Meeting of the Association
+            for Natural Language Processing) and JSAI 2026
+
+  - title: "Talks & Presentations"
+    cards:
+      - body: |-
+          - **3rd International AIWolfDial Workshop (INLG 2025)** — presented
+            our paper on intent-driven AIWolf agents with a hierarchical BDI
+            model and personality
+          - **JSAI 2026** — presented our work on LLM tendency profiling, a
+            6-axis evaluation framework for multi-agent dialogue systems
+          - **AIWolfDial workshop at JSAI 2026** — presented the design of my
+            competition agent
+
+  - title: "Teaching"
+    cards:
+      - heading: "Teaching Assistant, Shizuoka University"
+        body: |-
+          I teach NLP and programming to undergraduate students as a teaching
+          assistant.
+
+          - **Advanced Informatics Practice (先端情報学実習)** — spring and
+            fall semesters 2025, spring semester 2026
+          - **Data Processing Programming (データ処理プログラミング)** —
+            teaching assistant

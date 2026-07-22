@@ -1,0 +1,21 @@
+# /contact/ の英語コンテンツ。日本語は _data/ja/contact.yml
+
+hero:
+  title: "Contact"
+  tagline: "Feel free to reach out about AIWolf, NLP, or collaboration."
+  sub: "Email is the most reliable way to contact me."
+
+sections:
+  - title: "Email"
+    two_col: true
+    cards:
+      - body: |-
+          [yharada@kanolab.net](mailto:yharada@kanolab.net)
+
+          Please include a brief subject and context so I can respond more easily.
+          {: .muted}
+
+      - heading: "Links"
+        body: |-
+          - GitHub: [github.com/iggy157](https://github.com/iggy157)
+          - ACL Anthology: [2025.aiwolfdial-1.3](https://aclanthology.org/2025.aiwolfdial-1.3/), [2025.aiwolfdial-1.1](https://aclanthology.org/2025.aiwolfdial-1.1/)

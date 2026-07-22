@@ -199,62 +199,14 @@ document.querySelectorAll('.icon-card.app-link').forEach((icon) => {
   });
 });
 
-// ===== Blog posts loader (for /blog/index.html) =====
-async function loadPosts(lang) {
-  const listId = `blog-list-${lang}`;
-  const emptyId = `blog-empty-${lang}`;
-  const listEl = document.getElementById(listId);
-  const emptyEl = document.getElementById(emptyId);
-
-  if (!listEl) return;
-
-  try {
-    const res = await fetch(`/assets/data/posts_${lang}.json`, {
-      cache: 'no-store'
-    });
-    if (!res.ok) throw new Error('failed to fetch');
-    const posts = await res.json();
-
-    if (!Array.isArray(posts) || posts.length === 0) {
-      listEl.innerHTML = '';
-      if (emptyEl) emptyEl.style.display = 'block';
-      return;
-    }
-
-    listEl.innerHTML = '';
-    if (emptyEl) emptyEl.style.display = 'none';
-
-    posts.forEach((post) => {
-      const item = document.createElement('div');
-      item.className = 'blog-item';
-
-      const titleLink = document.createElement('a');
-      titleLink.className = 'blog-item-title';
-      titleLink.href = post.url || '#';
-      titleLink.textContent = post.title || 'Untitled';
-      titleLink.target = '_blank';
-      titleLink.rel = 'noreferrer';
-
-      const meta = document.createElement('div');
-      meta.className = 'blog-item-meta';
-      const dateText = post.date ? post.date : '';
-      const tagText =
-        post.tags && post.tags.length ? ` · ${post.tags.join(', ')}` : '';
-      meta.textContent = `${dateText}${tagText}`;
-
-      item.appendChild(titleLink);
-      if (dateText || tagText) item.appendChild(meta);
-
-      listEl.appendChild(item);
-    });
-  } catch (e) {
-    if (emptyEl) emptyEl.style.display = 'block';
+// ===== External links open in a new tab =====
+// Markdown 由来の本文リンクに target を付けて回る（サイト内リンクは除外）
+document.querySelectorAll('.card a[href^="http"]').forEach((a) => {
+  if (a.host !== window.location.host) {
+    a.target = '_blank';
+    a.rel = 'noreferrer';
   }
-}
-
-// ブログページにいる場合のみ発火（要素があれば読み込み）
-loadPosts('en');
-loadPosts('ja');
+});
 
 // ===== Favorites page (filter + "now") =====
 (function initFavorites() {

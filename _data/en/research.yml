@@ -1,0 +1,90 @@
+# /research/ の英語コンテンツ。日本語は _data/ja/research.yml
+
+hero:
+  title: "Research"
+  tagline: "Multi-party dialogue among LLM agents: building, improving, and evaluating conversational agents."
+  sub: >-
+    I use the Werewolf game (AIWolf) as a testbed where agents must reason,
+    persuade, deceive, and coordinate through natural language alone.
+  meta:
+    - label: "Affiliation"
+      value: "Kano Laboratory, Shizuoka University"
+    - label: "Focus"
+      value: "Multi-agent dialogue, LLM agents, NLP"
+
+sections:
+  - title: "LLM Agents in Multi-Party Dialogue"
+    cards:
+      - body: >-
+          Large language models are fluent in one-on-one conversation, yet
+          multi-party discussion among LLM agents still shows process-level
+          problems: agents ignore what others said, conform to a
+          dominant opinion, repeat themselves, and fail to keep strategies and
+          personas consistent over a long dialogue. My research tackles these
+          problems from three directions — designing agents, improving the
+          discussion process, and evaluating models and dialogue quality.
+
+  - title: "Approaches"
+    cards:
+      - heading: "Building: personality-driven agents with a hierarchical BDI model"
+        body: |-
+          A design methodology for Werewolf agents that integrates a two-layer
+          BDI (Belief–Desire–Intention) architecture with personality theories
+          (MBTI and Enneagram). A Macro-BDI layer maintains long-term strategy
+          while a Micro-BDI layer makes turn-by-turn tactical decisions, and 24
+          personality-derived parameters influence not just surface wording but
+          recognition, judgment, and action. Experiments showed a clear
+          trade-off between human-likeness and strategic optimality: a 14.1%
+          improvement in subjective human-likeness at the cost of a small drop
+          in win rate. Published at the 3rd International AIWolfDial Workshop
+          (INLG 2025).
+
+      - heading: "Improving: structuring the discussion process with LLM-generated exemplars"
+        body: |-
+          Ongoing work on improving the quality of multi-agent discussion
+          itself. A single LLM generates good discussion exemplars, which are
+          given to each agent as few-shot examples; keeping the exemplars'
+          utterance order and metadata (who spoke, at which stage, with which
+          non-utterance events) acts as a scaffold that helps agents respond to
+          each other, keep introducing new points late in the discussion, and
+          avoid repetition — the effect grows as discussions get longer or
+          models get smaller. An agent built this way won the subjective
+          evaluation in both the nine-player village and speak-anytime tracks
+          at the domestic AIWolf competition held with JSAI 2026.
+
+      - heading: "Evaluating: 6-axis tendency profiling for model selection"
+        body: |-
+          An evaluation framework that measures behavioral tendencies of LLMs
+          on six axes — logical reasoning, strategic diversity, strategic
+          quality, persona plasticity, persona robustness, and expressive
+          diversity — mapped to the input, thinking, and output stages of a
+          dialogue pipeline. Profiling GPT-5.2, Claude Opus 4.5, and Gemini 3
+          Pro revealed distributed profiles where different model combinations
+          are optimal at different stages, and a cost–performance Pareto
+          analysis derives the best assignment under budget constraints.
+          Presented at JSAI 2026.
+
+  - title: "AIWolf Contest as a Testbed"
+    cards:
+      - body: |-
+          The natural language division of the AIWolf contest has agents play a
+          full game of Werewolf using only conversation, and evaluates them by
+          win rates, human subjective evaluation, LLM-as-a-judge, and log
+          analysis. I take part on both sides. As a participant I have entered
+          three competitions so far:
+
+          - **AIWolfDial 2025 Winter** (international, INLG 2025) — entered the
+            personality-driven agent, which placed 2nd in subjective evaluation
+            in the five-player track
+          - **AIWolfDial 2026 Spring** (domestic, JSAI 2026) — 1st in
+            subjective evaluation in both the nine-player village and
+            speak-anytime tracks
+          - **AIWolfDial 2026 Winter** (international, INLG 2026) — 1st in win
+            rate in the five-player track of the first round, with later rounds
+            still to come
+
+          On the organizing side, I serve as a local organizer and co-authored
+          the official contest summary. Contest logs keep exposing what current
+          LLMs still cannot do in multi-party settings, such as staying
+          context-aware as the number of players grows, which feeds directly
+          back into my research questions.

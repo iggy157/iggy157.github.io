@@ -1,0 +1,23 @@
+# 毎日 GitHub Pages を再ビルドして、プロジェクトページのリポジトリ一覧
+# （jekyll-github-metadata 経由）を最新の状態に保つ。
+# 新しいリポジトリを作っても push なしで（最大1日遅れで）サイトに反映される。
+name: Refresh GitHub Pages
+
+on:
+  schedule:
+    - cron: "17 18 * * *" # 毎日 03:17 JST
+  workflow_dispatch:
+
+permissions:
+  pages: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request a Pages build
+        run: |
+          curl -sf -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/${{ github.repository }}/pages/builds"

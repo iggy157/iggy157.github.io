@@ -1,0 +1,29 @@
+# /projects/ の日本語コンテンツ。英語は _data/en/projects.yml
+# リポジトリ一覧は GitHub API（jekyll-github-metadata）から自動生成される。
+
+hero:
+  title: "プロジェクト"
+  tagline: "人狼知能エージェントや周辺ツールなどの開発。"
+  sub: >-
+    主に GitHub 上で、AIWolf 関連プロジェクトや解析・評価のためのユーティリティ等を公開しています。
+  meta:
+    - label: "GitHub"
+      value: "[github.com/iggy157](https://github.com/iggy157)"
+
+sections:
+  - title: "概要"
+    cards:
+      - body: |-
+          公開リポジトリは主に次の3種類です。
+
+          - 人狼知能コンテスト用エージェント — 個性・BDIモデル、few-shot議論例プロンプティング
+          - 評価ツール — LLM-as-a-judge、LLM傾向性プロファイリング
+          - コンテスト基盤 — ゲームサーバ、リアルタイムシステム、デモアプリ
+
+          [github.com/iggy157 →](https://github.com/iggy157)
+
+# 自動生成されるリポジトリ一覧セクションの見出しまわり
+repos:
+  title: "リポジトリ一覧"
+  note: "GitHub から自動取得（fork は除外、更新が新しい順）。"
+  empty: "リポジトリ一覧は GitHub Pages でのビルド時に生成されます。全リポジトリは上の GitHub プロフィールを参照してください。"

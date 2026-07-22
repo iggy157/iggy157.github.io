@@ -1,0 +1,32 @@
+# /projects/ の英語コンテンツ。日本語は _data/ja/projects.yml
+# リポジトリ一覧は GitHub API（jekyll-github-metadata）から自動生成される。
+
+hero:
+  title: "Projects"
+  tagline: "Open-source work and experimental agents for AIWolf."
+  sub: >-
+    Most of my code is available on GitHub, including AIWolf-related projects
+    and utilities for analysis and evaluation.
+  meta:
+    - label: "GitHub"
+      value: "[github.com/iggy157](https://github.com/iggy157)"
+
+sections:
+  - title: "Overview"
+    cards:
+      - body: |-
+          My public repositories mainly cover:
+
+          - AIWolf contest agents — personality / BDI models and few-shot
+            exemplar prompting
+          - Evaluation tools — LLM-as-a-judge and LLM tendency profiling
+          - Contest infrastructure — game servers, real-time systems, and
+            demo applications
+
+          [github.com/iggy157 →](https://github.com/iggy157)
+
+# 自動生成されるリポジトリ一覧セクションの見出しまわり
+repos:
+  title: "All repositories"
+  note: "Fetched automatically from GitHub (forks excluded), newest first."
+  empty: "The repository list is generated when the site is built on GitHub Pages. See the GitHub profile above for the full list."

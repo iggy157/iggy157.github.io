@@ -1,0 +1,306 @@
+# ═══════════════════════════════════════════════════════════════
+#  好きなもの一覧
+#
+#  カテゴリ（大きいブロック）の中に items（カード）がぶら下がる形。
+#  このファイルの並び順が、そのままページ上の並び順になります。
+#
+#  ── カテゴリ ──────────────────────────────
+#  id    : 色の指定に使う識別子。CSS の --fav-<id> と対応
+#  label : セクションの見出し
+#  icon  : 見出しの記号
+#  tags  : そのカテゴリ全件に自動で付く検索語
+#
+#  ── items（カード）────────────────────────
+#  name     : 必須。カードの見出し
+#  sub      : 2行目の小さい文字（アーティスト名・英訳など）
+#  url      : 書くとリンクカードになる。省略すると絵文字カード
+#  emoji    : リンクなしカードのアイコン
+#  badge    : リンクの種類。省略時は URL から自動判定
+#             /playlist/ → playlist, open.spotify.com → spotify,
+#             tabelog.com → tabelog, それ以外 → official
+#  keywords : 検索用の追加語。name / sub / カテゴリの tags は
+#             自動で検索対象に入るので、別名だけ書けばよい
+#             （例: ネコ に「猫」、僕のヒーローアカデミア に「ヒロアカ」）
+#
+#  追加     = items に1ブロック足すだけ
+#  削除     = ブロックを消すだけ
+#  移動     = ブロックを別のカテゴリの items に移すだけ
+#  「N items」の件数と id の連番は自動で振り直されます。
+# ═══════════════════════════════════════════════════════════════
+
+
+
+# ──────────────────────────────────────────────────────────────
+#  Music   (13 items)
+# ──────────────────────────────────────────────────────────────
+- id: music
+  label: Music
+  icon: "♫"
+  tags: music 音楽
+  items:
+    - name: Florence Road
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/0zzKEeF2bAVKrWeKc9CyJV?si=EHXKRiHRSCqnjVjTTt2qkA
+
+    - name: Hannah Grae
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/06vyPLBCJLDF8EGgQJEEhV?si=kOEMYmwGTAaZMUcx9M8k3A
+
+    - name: Hannya
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/6hFoHM39PZxkJ0eKfaeeqh?si=kFgUNkGIRa22XqaB7ZB2LQ
+
+    - name: NORIKIYO
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/4mNrY8D5uTNbiCBtnh3YmL?si=16UFmbX2RVWawpr8WJJdig
+
+    - name: Grace Vanderwaal
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/3YdT8QvV4QvY4DfVJhxdcZ?si=LjLMJ6IkQPSC3EcCWjyMpA
+
+    - name: Red Eye
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/4yu1crXDHBTb27yiM5otx5?si=-XlvlFXWT7e66FybKAO7bA
+
+    - name: Gracie Abrams
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/4tuJ0bMpJh08umKkEXKUI5?si=XyF1mJppRhSGLQWf-ix0vw
+
+    - name: BANKS
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/2xe8IXgCTpwHE3eA9hTs4n?si=qL42EtwgQDaBObskso5RsA
+
+    - name: SEEDA
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/3L1EmlKEdboomQtlRj4XtY?si=GKDbl5lyR2mHYebbfdC9Kg
+
+    - name: Maisie Peters
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/2RVvqRBon9NgaGXKfywDSs?si=zr3QHGSzQlyUAwA_LjcFqw
+
+    - name: Reichi
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/5BQWK2wChHTnJKqmgR9D3D?si=Per5SzuSReOaahj3NiycIQ
+
+    - name: Olivia Rodrigo
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/1McMsnEElThX1knmY4oliG?si=zdCcACcRSW2fw30YTkH6pg
+
+    - name: THE MUSMUS
+      sub: mixlist
+      url: https://open.spotify.com/intl-ja/artist/4JUOXjwIHe5onpDudEuWXU?si=jBrkhUelTWG46MQHwUmi3g
+
+
+# ──────────────────────────────────────────────────────────────
+#  Fragrance   (4 items)
+# ──────────────────────────────────────────────────────────────
+- id: fragrance
+  label: Fragrance
+  icon: "✦"
+  tags: fragrance 香水
+  items:
+    - name: Lazy Sunday Morning
+      sub: Maison Margiela Replica
+      url: https://www.maisonmargiela-fragrances.com/
+
+    - name: Sakura Cherry Blossom
+      sub: Jo Malone London
+      url: https://www.jomalone.jp/
+
+    - name: Wood Sage & Sea Salt
+      sub: Jo Malone London
+      url: https://www.jomalone.jp/
+
+    - name: Warm Cotton
+      sub: Clean Reserve
+      url: https://www.cleanbeauty.com/
+
+
+# ──────────────────────────────────────────────────────────────
+#  Anime   (17 items)
+# ──────────────────────────────────────────────────────────────
+- id: anime
+  label: Anime
+  icon: "▶"
+  tags: anime アニメ
+  items:
+
+    - name: 銀魂
+      sub: Gintama
+      url: https://www.anime-gintama.com/
+
+    - name: 進撃の巨人
+      sub: Attack on Titan
+      url: https://shingeki.tv/
+
+    - name: タコピーの原罪
+      sub: Takopi's Original Sin
+      url: https://www.tbs.co.jp/anime/takopi_project/
+
+    - name: トムとジェリー
+      sub: Tom and Jerry
+      url: https://warnerbros.co.jp/franchise/tomandjerry/
+
+    - name: 僕のヒーローアカデミア
+      sub: My Hero Academia
+      url: https://heroaca.com/
+      keywords: ヒロアカ
+
+    - name: ジョジョの奇妙な冒険
+      sub: JoJo's Bizarre Adventure
+      url: https://jojo-animation.com/
+
+    - name: Dr.STONE
+      sub: Dr. Stone
+      url: https://dr-stone.jp/
+      keywords: ドクターストーン
+
+    - name: メダリスト
+      sub: Medalist
+      url: https://medalist-pr.com/
+
+    - name: 呪術廻戦
+      sub: Jujutsu Kaisen
+      url: https://jujutsukaisen.jp/
+
+    - name: 葬送のフリーレン
+      sub: Frieren
+      url: https://frieren-anime.jp/
+
+    - name: クレヨンしんちゃん
+      sub: Crayon Shin-chan
+      url: https://www.shinchan-app.jp/
+
+    - name: Re:ゼロから始める異世界生活
+      sub: Re:Zero - Starting Life in Another World
+      url: https://re-zero-anime.jp/tv/
+
+    - name: ハイキュー!!
+      sub: Haikyu!!
+      url: https://haikyu.jp/
+
+    - name: ワンパンマン
+      sub: One Punch Man
+      url: https://onepunchman-anime.net/
+
+    - name: SPY×FAMILY
+      sub: Spy Family
+      url: https://spy-family.net/
+      keywords: スパイファミリー
+
+    - name: チェンソーマン
+      sub: Chainsaw Man
+      url: https://chainsawman.dog/
+
+    - name: チ。
+      sub: Chi.
+      url: https://chi-anime.com/
+      keywords: 地動説
+
+    - name: シャングリラ・フロンティア
+      sub: Shangri-La Frontier
+      url: https://anime.shangrilafrontier.com/
+      keywords: シャングリラフロンティア
+
+    - name: SLAM DUNK
+      sub: Slam Dunk
+      url: https://slamdunk-movie.jp/
+      keywords: スラムダンク
+
+# ──────────────────────────────────────────────────────────────
+#  Love   (6 items)
+# ──────────────────────────────────────────────────────────────
+- id: Love
+  label: Love
+  icon: "♡"
+  tags: Love
+  items:
+    - name: NBA
+      sub: Basketball
+      emoji: 🏀
+
+    - name: ダウンタウン
+      sub: Downtown
+      emoji: 🎤
+
+    - name: 料理
+      sub: Cooking
+      emoji: 🍳
+
+    - name: チェス
+      sub: Chess
+      emoji: ♟
+
+    - name: 牛肉
+      sub: Beef
+      emoji: 🥩
+
+    - name: 洋服
+      sub: Fashion
+      emoji: 👔
+      keywords: clothes
+
+
+# ──────────────────────────────────────────────────────────────
+#  Spot   (13 items)
+# ──────────────────────────────────────────────────────────────
+- id: spot
+  label: Spot
+  icon: "◆"
+  tags: spot 店
+  items:
+    - name: 焼肉 ふじひろ
+      sub: Yakiniku Fujihiro
+      url: https://tabelog.com/shizuoka/A2202/A220201/22030608/
+    
+    - name: 天ぷら よこい
+      sub: Tempura Yokoi
+      url: https://tabelog.com/aichi/A2301/A230114/23006034/
+
+    - name: とんかつ あきら
+      sub: Tonkatsu Akira
+      url: https://tabelog.com/tokyo/A1303/A130301/13300273/
+
+    - name: 但馬屋 心斎橋
+      sub: Tajimaya Shinsaibashi
+      url: https://tabelog.com/osaka/A2701/A270201/27067045/
+
+    - name: フォルテッシモアッシュ
+      sub: Fortissimo H
+      url: https://tabelog.com/aichi/A2301/A230106/23004369/
+
+    - name: アボンドンス
+      sub: Abondance
+      url: https://tabelog.com/shizuoka/A2202/A220201/22003393/
+
+    - name: キルフェボン
+      sub: Quil Fait Bon
+      url: https://tabelog.com/shizuoka/A2202/A220201/22002195/
+
+    - name: 備長扇屋
+      sub: Binchou Ougiya
+      url: https://tabelog.com/shizuoka/A2202/A220201/22001903/
+
+    - name: 焼肉ハウス 扇寿
+      sub: Yakiniku House Senju
+      url: https://tabelog.com/shizuoka/A2202/A220201/22001830/
+
+    - name: pizzeria ciro
+      sub: Pizzeria Ciro
+      url: https://tabelog.com/shizuoka/A2202/A220201/22040516/
+
+    - name: 串カツ田中
+      sub: Kushikatsu Tanaka
+      url: https://tabelog.com/shizuoka/A2202/A220201/22035298/
+
+    - name: えびどて食堂
+      sub: Ebidote Shokudo
+      url: https://tabelog.com/aichi/A2301/A230101/23046022/
+
+    - name: 炭焼鰻 はじめ
+      sub: Sumiyaki Unagi Hajime
+      url: https://tabelog.com/shizuoka/A2202/A220201/22030160/
+
+    - name: 鉄板処 めぐろ
+      sub: Teppan Meguro
+      url: https://tabelog.com/tokyo/A1301/A130103/13213025/

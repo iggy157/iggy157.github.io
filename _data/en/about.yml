@@ -1,0 +1,40 @@
+# /about/ の英語コンテンツ。日本語は _data/ja/about.yml
+# body / value は Markdown が使えます。
+
+hero:
+  title: "About Me"
+  tagline: "Student researcher on multi-party dialogue among LLM agents at Kano Laboratory, Shizuoka University."
+  sub: >-
+    Interested in how LLM-based agents can reason, persuade,
+    deceive, and coordinate in group conversation.
+  meta:
+    - label: "Name"
+      value: "Yuya Harada"
+    - label: "Affiliation"
+      value: "Kano Laboratory, Shizuoka University"
+
+sections:
+  - title: "Profile"
+    two_col: true
+    cards:
+      - info:
+          - label: "Name"
+            value: "Yuya Harada"
+          - label: "Birthday"
+            value: "2004/05/27"
+          - label: "Birthplace"
+            value: "Hamamatsu, Shizuoka, Japan"
+          - label: "Affiliation"
+            value: "Kano Laboratory, Shizuoka University"
+          - label: "Focus"
+            value: "Multi-agent dialogue, LLM agents, NLP (AIWolf)"
+          - label: "Email"
+            value: "[yharada@kanolab.net](mailto:yharada@kanolab.net)"
+      - heading: "Short Bio"
+        body: >-
+          I am a student researcher at Kano Laboratory, Shizuoka University,
+          working on multi-party dialogue among LLM agents. Using the Werewolf
+          game (AIWolf) as a testbed, I design agents that integrate
+          personality and intention models, improve the quality of multi-agent
+          discussion, and build evaluation frameworks for profiling LLM
+          behavior. I also help organize the international AIWolf contest.

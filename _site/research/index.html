@@ -6,10 +6,10 @@
   <meta name="google-site-verification" content="xpCX_a_-YL4ySDV200mcZJMXzPFNYfxY-ZSpz4uDc0I" />
   
 
-  <title>研究内容 | 原田悠矢 - 自然言語処理・人狼知能(AIWolf)</title>
-  <meta name="description" content="原田悠矢（静岡大学 情報学部 狩野研究室）の研究内容。自然言語処理（NLP）や 人狼知能（AIWolf）、対話システムを中心に、エージェント設計や長期文脈推論、コミットメントトラッキングなどのアプローチを紹介します。" /><link rel="canonical" href="http://localhost:4000/research/" /><meta property="og:type" content="article" />
-  <meta property="og:title" content="研究内容 | 原田悠矢 - 自然言語処理・人狼知能(AIWolf)" />
-  <meta property="og:description" content="原田悠矢（静岡大学 情報学部 狩野研究室）の研究内容。自然言語処理（NLP）や 人狼知能（AIWolf）、対話システムを中心に、エージェント設計や長期文脈推論、コミットメントトラッキングなどのアプローチを紹介します。" />
+  <title>研究内容 | 原田悠矢 - LLMエージェントの多人数対話</title>
+  <meta name="description" content="原田悠矢（静岡大学 情報学部 狩野研究室）の研究内容。LLMエージェントによる多人数対話を主軸に、人狼知能（AIWolf）をテストベッドとした個性統合エージェントの設計、議論プロセスの改善、LLMの傾向性プロファイリングによる評価を紹介します。" /><link rel="canonical" href="http://localhost:4000/research/" /><meta property="og:type" content="article" />
+  <meta property="og:title" content="研究内容 | 原田悠矢 - LLMエージェントの多人数対話" />
+  <meta property="og:description" content="原田悠矢（静岡大学 情報学部 狩野研究室）の研究内容。LLMエージェントによる多人数対話を主軸に、人狼知能（AIWolf）をテストベッドとした個性統合エージェントの設計、議論プロセスの改善、LLMの傾向性プロファイリングによる評価を紹介します。" />
   <meta property="og:url" content="http://localhost:4000/research/" />
   <meta property="og:site_name" content="原田悠矢 ポートフォリオ" />
 
@@ -65,160 +65,210 @@
 
 
   <main class="screen screen-overview">
-    <div class="home">
+    <div class="home" data-lang="en">
   <header class="hero">
     <div class="hero-main">
-      <h1 class="hero-name">
-        <span data-lang="en">Research</span>
-        <span data-lang="ja">研究内容</span>
-      </h1>
-      <p class="hero-tagline">
-        <span data-lang="en">
-          Natural-language Werewolf agents, dialogue systems, and long-context reasoning.
-        </span>
-        <span data-lang="ja">
-          自然言語人狼エージェント、対話システム、長期文脈推論に関する研究。
-        </span>
-      </p>
-      <p class="hero-sub">
-        <span data-lang="en">
-          Focusing on the AIWolf natural language division and agents that can reason,
-          persuade, and deceive through conversation.
-        </span>
-        <span data-lang="ja">
-          人狼知能コンテスト自然言語部門を中心に、会話による推論・説得・欺瞞が可能な
-          エージェントを研究しています。
-        </span>
-      </p>
+      <h1 class="hero-name">Research</h1>
+      <p class="hero-tagline">Multi-party dialogue among LLM agents: building, improving, and evaluating conversational agents.</p>
+      <p class="hero-sub">I use the Werewolf game (AIWolf) as a testbed where agents must reason, persuade, deceive, and coordinate through natural language alone.</p>
     </div>
     <div class="hero-meta">
       <div class="hero-meta-item">
-        <span class="label" data-lang="en">Affiliation</span>
-        <span class="label" data-lang="ja">所属</span>
-        <span class="value" data-lang="en">Kano Laboratory, Shizuoka University</span>
-        <span class="value" data-lang="ja">静岡大学 情報学部 狩野研究室</span>
+        <span class="label">Affiliation</span>
+        <span class="value">Kano Laboratory, Shizuoka University</span>
       </div>
       <div class="hero-meta-item">
-        <span class="label" data-lang="en">Focus</span>
-        <span class="label" data-lang="ja">研究分野</span>
-        <span class="value" data-lang="en">NLP, AIWolf, Dialogue Systems</span>
-        <span class="value" data-lang="ja">自然言語処理、AIWolf、対話システム</span>
+        <span class="label">Focus</span>
+        <span class="value">Multi-agent dialogue, LLM agents, NLP</span>
       </div>
     </div>
   </header>
-
   <section class="section">
-    <h2 class="section-title">
-      <span data-lang="en">Development of AIWolf Agent</span>
-      <span data-lang="ja">AIWolf エージェントの開発</span>
-    </h2>
+    <h2 class="section-title">LLM Agents in Multi-Party Dialogue</h2>
     <div class="section-body">
       <article class="card">
-        <p data-lang="en">
-          I am working on developing autonomous agents for the natural language
-          division of the AIWolf contest, where agents play the game of Werewolf
-          using only text-based conversation for reasoning, persuasion, and deception.
-        </p>
-        <p data-lang="ja">
-          自然言語部門の 人狼知能コンテストにおいて、チャットのみを用いて推論・説得・欺瞞を行い、
-          自律的に人狼ゲームをプレイするエージェントの開発を行っています。
-        </p>
-      </article>
+        <p>Large language models are fluent in one-on-one conversation, yet multi-party discussion among LLM agents still shows process-level problems: agents ignore what others said, conform to a dominant opinion, repeat themselves, and fail to keep strategies and personas consistent over a long dialogue. My research tackles these problems from three directions — designing agents, improving the discussion process, and evaluating models and dialogue quality.</p>
 
-      <article class="card">
-        <h3>
-          <span data-lang="en">About the AIWolf Project</span>
-          <span data-lang="ja">AIWolf プロジェクトについて</span>
-        </h3>
-        <p data-lang="en">
-          The natural language division of the Werewolf Intelligence Competition
-          is a contest in which agent players compete autonomously in games of
-          Werewolf, using only natural language conversation to perform
-          reasoning, persuasion, and deception. Its goal is to evaluate the
-          limitations and potential of dialogue systems and large language models.
-        </p>
-        <p data-lang="en">
-          The competition features a 5-player village track and a 13-player
-          village track. In complex situations that include multiple roles and
-          secret conversations among the werewolves, agents developed by each
-          team connect to the game server and play autonomously.
-        </p>
-        <p data-lang="en">
-          Evaluation is conducted from multiple angles, not only by win rate but
-          also through human subjective assessment, automated subjective
-          evaluation using LLM-as-a-judge, and detailed log analysis.
-        </p>
-
-        <p data-lang="ja">
-          人狼知能知能コンテストの自然言語部門は、エージェント同士が人狼ゲームを
-          自動でプレイし、その中で行われる会話のみを用いて推論・説得・欺瞞を行う競技です。
-          対話システムや大規模言語モデルの限界と可能性を評価することを目的としています。
-        </p>
-        <p data-lang="ja">
-          大会では 5人村と 13人村のトラックがあり、多数の役職や人狼同士の秘密会話などを含む
-          複雑な状況の中で、各チームが開発したエージェントがゲームサーバに接続して自律的にプレイします。
-        </p>
-        <p data-lang="ja">
-          評価は単なる勝率だけでなく、人間による主観評価、LLM-as-a-judge による自動主観評価、
-          詳細なログ解析など多面的に行われます。
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>
-          <span data-lang="en">Issues</span>
-          <span data-lang="ja">課題</span>
-        </h3>
-        <ul data-lang="en">
-          <li>Fails to respond appropriately to questions or others’ statements, leading to poor turn-taking.</li>
-          <li>Makes remarks that don’t match the situation or repeats content, showing weak grasp of game state.</li>
-          <li>Struggles to handle player relationships and cooperative actions in complex multi-role settings.</li>
-          <li>Tends to follow specific opinions, making diverse and strategic counterarguments difficult.</li>
-          <li>Vulnerable to repeated prompting, sometimes leaking secret information or breaking consistency.</li>
-          <li>Small number of participants makes win rates and subjective evaluations unstable.</li>
-          <li>LLM-based responses are slow, limiting real-time play with human players.</li>
-        </ul>
-        <ul data-lang="ja">
-          <li>質問や他者発話への応答が不適切になりやすく、会話のターン交代や文脈利用が不十分。</li>
-          <li>状況と合わない発言や同内容の繰り返しが多く、ゲーム状態の把握や自然さに課題がある。</li>
-          <li>役職やプレイヤー数が増える複雑な状況では、プレイヤー間関係や協調行動の扱いが難しい。</li>
-          <li>過去ログを参照する一方で、特定の意見に追従しやすく、多様な戦略的反論や視点の提示が難しい。</li>
-          <li>繰り返しのプロンプトに弱く、秘密情報の漏洩や、嘘と真実の矛盾維持が難しい。</li>
-          <li>参加チーム数が少なく、同一エージェント同士の対戦が多いため、勝率や主観評価が安定しにくい。</li>
-          <li>LLM 応答に時間がかかるため、人間とのリアルタイム混成対戦には高速化が必要。</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>
-          <span data-lang="en">Approach</span>
-          <span data-lang="ja">アプローチ</span>
-        </h3>
-        <ul data-lang="en">
-          <li>Hierarchical BDI architecture to align local actions with long-term strategies.</li>
-          <li>Personality modeling via cognitive biases and 24 MBTI-derived parameters.</li>
-          <li>Commitment tracking for contradiction detection and game state understanding.</li>
-        </ul>
-        <ul data-lang="ja">
-          <li>階層型 BDI アーキテクチャにより、長期戦略と整合する各ステージの行動選択を行うエージェントの構築。</li>
-          <li>認知バイアスを取り入れ、MBTI 由来の 24 パラメータによる個性を再現するエージェント設計。</li>
-          <li>コミットメントトラッキングを用いて矛盾検出とゲーム状態理解を行うエージェントの構築。</li>
-        </ul>
       </article>
     </div>
   </section>
+  <section class="section">
+    <h2 class="section-title">Approaches</h2>
+    <div class="section-body">
+      <article class="card">
+        <h3>Building: personality-driven agents with a hierarchical BDI model</h3>
+        <p>A design methodology for Werewolf agents that integrates a two-layer
+BDI (Belief–Desire–Intention) architecture with personality theories
+(MBTI and Enneagram). A Macro-BDI layer maintains long-term strategy
+while a Micro-BDI layer makes turn-by-turn tactical decisions, and 24
+personality-derived parameters influence not just surface wording but
+recognition, judgment, and action. Experiments showed a clear
+trade-off between human-likeness and strategic optimality: a 14.1%
+improvement in subjective human-likeness at the cost of a small drop
+in win rate. Published at the 3rd International AIWolfDial Workshop
+(INLG 2025).</p>
 
-  <section class="section section-home-button">
-    <a
-      href="/#home-screen"
-      class="home-button"
-      aria-label="Back to home screen"
-    ></a>
+      </article>
+      <article class="card">
+        <h3>Improving: structuring the discussion process with LLM-generated exemplars</h3>
+        <p>Ongoing work on improving the quality of multi-agent discussion
+itself. A single LLM generates good discussion exemplars, which are
+given to each agent as few-shot examples; keeping the exemplars’
+utterance order and metadata (who spoke, at which stage, with which
+non-utterance events) acts as a scaffold that helps agents respond to
+each other, keep introducing new points late in the discussion, and
+avoid repetition — the effect grows as discussions get longer or
+models get smaller. An agent built this way won the subjective
+evaluation in both the nine-player village and speak-anytime tracks
+at the domestic AIWolf competition held with JSAI 2026.</p>
+
+      </article>
+      <article class="card">
+        <h3>Evaluating: 6-axis tendency profiling for model selection</h3>
+        <p>An evaluation framework that measures behavioral tendencies of LLMs
+on six axes — logical reasoning, strategic diversity, strategic
+quality, persona plasticity, persona robustness, and expressive
+diversity — mapped to the input, thinking, and output stages of a
+dialogue pipeline. Profiling GPT-5.2, Claude Opus 4.5, and Gemini 3
+Pro revealed distributed profiles where different model combinations
+are optimal at different stages, and a cost–performance Pareto
+analysis derives the best assignment under budget constraints.
+Presented at JSAI 2026.</p>
+
+      </article>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">AIWolf Contest as a Testbed</h2>
+    <div class="section-body">
+      <article class="card">
+        <p>The natural language division of the AIWolf contest has agents play a
+full game of Werewolf using only conversation, and evaluates them by
+win rates, human subjective evaluation, LLM-as-a-judge, and log
+analysis. I take part on both sides. As a participant I have entered
+three competitions so far:</p>
+
+<ul>
+  <li><strong>AIWolfDial 2025 Winter</strong> (international, INLG 2025) — entered the
+personality-driven agent, which placed 2nd in subjective evaluation
+in the five-player track</li>
+  <li><strong>AIWolfDial 2026 Spring</strong> (domestic, JSAI 2026) — 1st in
+subjective evaluation in both the nine-player village and
+speak-anytime tracks</li>
+  <li><strong>AIWolfDial 2026 Winter</strong> (international, INLG 2026) — 1st in win
+rate in the five-player track of the first round, with later rounds
+still to come</li>
+</ul>
+
+<p>On the organizing side, I serve as a local organizer and co-authored
+the official contest summary. Contest logs keep exposing what current
+LLMs still cannot do in multi-party settings, such as staying
+context-aware as the number of players grows, which feeds directly
+back into my research questions.</p>
+
+      </article>
+    </div>
+  </section>
+</div><div class="home" data-lang="ja">
+  <header class="hero">
+    <div class="hero-main">
+      <h1 class="hero-name">研究内容</h1>
+      <p class="hero-tagline">LLMエージェントによる多人数対話 ― エージェントの構築・改善・評価。</p>
+      <p class="hero-sub">自然言語のみで推論・説得・欺瞞・協調が要求される人狼ゲーム（AIWolf）を テストベッドとして研究しています。</p>
+    </div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="label">所属</span>
+        <span class="value">静岡大学 情報学部 狩野研究室</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="label">研究分野</span>
+        <span class="value">マルチエージェント対話、LLMエージェント、自然言語処理</span>
+      </div>
+    </div>
+  </header>
+  <section class="section">
+    <h2 class="section-title">LLMエージェントの多人数対話</h2>
+    <div class="section-body">
+      <article class="card">
+        <p>大規模言語モデルは1対1の対話では流暢に振る舞えますが、複数のLLMエージェントによる 多人数の議論では、他者の発話を無視する、特定の意見に同調する、同じ内容を繰り返す、 長い対話の中で戦略やペルソナの一貫性を保てない、といったプロセスレベルの問題が 依然として残っています。私の研究は、この問題に「エージェントの構築」 「議論プロセスの改善」「モデルと対話品質の評価」の3方向から取り組むものです。</p>
+
+      </article>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">アプローチ</h2>
+    <div class="section-body">
+      <article class="card">
+        <h3>構築：階層型BDIと個性を統合したエージェント設計</h3>
+        <p>2層のBDI（信念・願望・意図）アーキテクチャと性格理論（MBTI・エニアグラム）を
+統合した人狼エージェントの設計手法です。Macro-BDI層が長期戦略を保持し、
+Micro-BDI層がターンごとの戦術判断を行い、性格から導出した24パラメータが
+発話スタイルだけでなく認識・判断・行動にまで影響します。実験では、勝率を
+わずかに犠牲にする代わりに人間らしさの主観評価が14.1%向上するという、
+「人間らしさと戦略的最適性のトレードオフ」を定量的に示しました。
+第3回 International AIWolfDial Workshop（INLG 2025）で発表。</p>
+
+      </article>
+      <article class="card">
+        <h3>改善：LLM生成の議論例による議論プロセスの構造化</h3>
+        <p>多エージェント議論そのものの質を高める研究に現在取り組んでいます。単一のLLMに
+良質な議論例を生成させ、それをfew-shot例として各エージェントに与える際、
+発話の順序とメタデータ（誰が・どの段階で・どんなイベントの中で話したか）を
+保った提示が「足場」として機能し、他者への応答や議論後半での新しい論点の提示、
+繰り返しの回避を促すことを確認しました。この効果は議論が長いほど、モデルが
+小さいほど大きくなります。この方式で構築したエージェントは、JSAI 2026併設の
+国内大会（AIWolfDial 2026 Spring）の主観評価で9人村・いつでも発話の
+両トラック1位となりました。</p>
+
+      </article>
+      <article class="card">
+        <h3>評価：6軸傾向プロファイリングによるモデル選択</h3>
+        <p>LLMの行動傾向を6軸（論理的推理・戦略的多様性・戦略的品質・ペルソナ可塑性・
+ペルソナ耐性・表現多様性）で測定し、対話パイプラインの入力・思考・出力の
+各段階に対応づける評価フレームワークです。GPT-5.2、Claude Opus 4.5、
+Gemini 3 Proをプロファイルした結果、段階ごとに最適なモデルが異なる
+「分散型プロファイル」が明らかになり、コスト・性能のパレート分析により
+予算制約下での最適なモデル割り当てを導出できます。人工知能学会全国大会
+（JSAI 2026）で発表。</p>
+
+      </article>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">人狼知能大会</h2>
+    <div class="section-body">
+      <article class="card">
+        <p>人狼知能コンテスト自然言語部門は、エージェント同士が会話のみで人狼ゲームを
+プレイし、勝率・人間による主観評価・LLM-as-a-judge・ログ解析によって
+評価される競技です。私は参加者と運営の両方の立場で関わっています。
+参加者としてはこれまでに3大会に出場しました。</p>
+
+<ul>
+  <li><strong>AIWolfDial 2025 Winter</strong>（国際大会・INLG 2025）— 個性統合エージェントで
+出場し、5人村トラックの主観評価で2位</li>
+  <li><strong>AIWolfDial 2026 Spring</strong>（国内大会・人工知能学会）— 主観評価で
+9人村・いつでも発話の両トラック1位</li>
+  <li><strong>AIWolfDial 2026 Winter</strong>（国際大会・INLG 2026）— 1次大会の5人村で
+勝率1位（大会は継続中）</li>
+</ul>
+
+<p>運営側としてはローカルオーガナイザーを務め、公式サマリ論文の共著者でも
+あります。コンテストのログからは、プレイヤー数が増えると文脈を追えなく
+なるなど、現在のLLMが多人数対話でまだできないことが見え続けており、
+それがそのまま次の研究課題になっています。</p>
+
+      </article>
+    </div>
   </section>
 </div>
 
     <button class="to-top" aria-label="Scroll to top">⌃</button>
-  </main>
+  </main><a
+    href="/#home-screen"
+    class="home-indicator"
+    aria-label="Back to home screen"
+  ><span></span></a>
 
   <script src="/assets/js/main.js"></script>
 </body>

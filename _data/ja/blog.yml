@@ -1,0 +1,12 @@
+# /blog/ の日本語コンテンツ（ページの見出しまわり）。英語は _data/en/blog.yml
+# 記事一覧そのものは _data/en/posts.yml, _data/ja/posts.yml で管理。
+
+hero:
+  title: "ブログ"
+  tagline: "AIWolf や NLP、実験メモなどの雑記。"
+  sub: >-
+    記事一覧は YAML から自動生成しています。今後も少しずつ追加していく予定です。
+
+list:
+  title: "記事一覧"
+  empty: "まだ記事はありません。"

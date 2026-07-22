@@ -1,0 +1,39 @@
+# /about/ の日本語コンテンツ。英語は _data/en/about.yml
+# body / value は Markdown が使えます。
+
+hero:
+  title: "自己紹介"
+  tagline: "静岡大学 狩野研究室で LLMエージェントの多人数対話を研究しています。"
+  sub: >-
+    LLMベースのエージェントが集団の会話の中でどのように推論・説得・欺瞞・協調を
+    行えるかに関心があります。
+  meta:
+    - label: "名前"
+      value: "原田 悠矢"
+    - label: "所属"
+      value: "静岡大学 情報学部 狩野研究室"
+
+sections:
+  - title: "プロフィール"
+    two_col: true
+    cards:
+      - info:
+          - label: "名前"
+            value: "原田 悠矢"
+          - label: "生年月日"
+            value: "2004年5月27日"
+          - label: "出身"
+            value: "日本 静岡県 浜松市"
+          - label: "所属"
+            value: "静岡大学 情報学部 狩野研究室"
+          - label: "研究分野"
+            value: "マルチエージェント対話、LLMエージェント、自然言語処理（AIWolf）"
+          - label: "メール"
+            value: "[yharada@kanolab.net](mailto:yharada@kanolab.net)"
+      - heading: "概要"
+        body: >-
+          静岡大学 狩野研究室に所属し、LLMエージェントによる多人数対話の研究に
+          取り組んでいます。人狼ゲーム（AIWolf）をテストベッドとして、個性や意図の
+          モデルを統合したエージェントの設計、多エージェント議論の質の改善、
+          LLMの行動傾向をプロファイルする評価フレームワークの構築を行っています。
+          国際人狼知能コンテストの運営にも携わっています。

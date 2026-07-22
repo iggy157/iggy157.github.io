@@ -1,0 +1,30 @@
+# /publications/ の英語コンテンツ。日本語は _data/ja/publications.yml
+# 論文を追加するときは papers に 1 ブロック足すだけ（両言語のファイルに追加）。
+
+hero:
+  title: "Publications"
+  tagline: "Selected papers related to AIWolf and dialogue systems."
+  sub: "For the latest list, please also check the ACL Anthology links."
+
+section_title: "Papers"
+
+papers:
+  - venue: "JSAI 2026"
+    url: "https://pub.confit.atlas.jp/ja/event/jsai2026/presentation/1J4-GS-10k-01"
+    title: "Tendency Profiling: A 6-Axis Evaluation Framework for Multi-Agent Dialogue Systems"
+    authors: "Yuya Harada, Yoshinobu Kano"
+    meta: "The 40th Annual Conference of JSAI, 2026 (1J4-GS-10k-01)"
+
+  - venue: "INLG2025 AIWolfDial 2025"
+    url: "https://aclanthology.org/2025.aiwolfdial-1.3/"
+    title: "Intent-driven AIWolf Agents with Hierarchical BDI Model and Personality"
+    authors: "Yuya Harada, Yoshinobu Kano"
+    meta: "3rd International AIWolfDial Workshop, 2025 (ACL Anthology: 2025.aiwolfdial-1.3)"
+
+  - venue: "INLG2025 AIWolfDial 2025"
+    url: "https://aclanthology.org/2025.aiwolfdial-1.1/"
+    title: "AIWolfDial 2025: Summary of Natural Language Division of 7th International AIWolf Contest"
+    authors: >-
+      Yoshinobu Kano, Neo Watanabe, Yuya Harada, Yuto Sahashi, Claus Aranha, Daisuke Katagami,
+      Kei Harada, Michimasa Inaba, Takeshi Ito, Hirotaka Osawa, Takashi Otsuki, Fujio Toriumi
+    meta: "3rd International AIWolfDial Workshop, 2025 (ACL Anthology: 2025.aiwolfdial-1.1)"
