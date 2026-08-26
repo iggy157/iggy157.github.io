@@ -73,5 +73,5 @@ dock:
   - href: "https://iggy157.github.io/recipe_memo/index.html"
     img: "/assets/img/recipe.png"
     alt: "Recipe icon"
-    title: "レシピ"
+    title: "Recipes"
     external: true
