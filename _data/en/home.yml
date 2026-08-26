@@ -70,7 +70,8 @@ dock:
     title: "AIWolf"
     external: true
 
-  - href: "mailto:yharada@kanolab.net"
-    img: "/assets/img/mail.png"
-    alt: "Mail icon"
-    title: "Mail"
+  - href: "https://iggy157.github.io/recipe_memo/index.html"
+    img: "/assets/img/recipe.png"
+    alt: "Recipe icon"
+    title: "Recipe"
+    external: true
