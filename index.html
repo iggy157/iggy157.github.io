@@ -61,7 +61,7 @@ description: "原田悠矢（Yuya Harada）のポートフォリオサイト。�
     {%- assign d = site.data[lang].home %}
     <div class="icon-grid" data-lang="{{ lang }}">
       {%- for app in d.apps %}
-      <a class="icon-card app-link" href="{{ app.href }}">
+      <a class="icon-card app-link" href="{{ app.href }}"{% if app.external %} target="_blank" rel="noreferrer"{% endif %}>
         <div class="icon-image-wrapper">
           <img src="{{ app.img }}" alt="{{ app.alt }}" class="icon-image">
         </div>

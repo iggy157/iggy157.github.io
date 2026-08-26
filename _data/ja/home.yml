@@ -32,11 +32,12 @@ apps:
     title: "プロジェクト"
     sub: "GitHub"
 
-  - href: "/blog/"
+  - href: "https://pri-blog.iggy157.workers.dev/"
     img: "/assets/img/blog.png"
     alt: "Blog icon"
     title: "ブログ"
-    sub: "記事一覧"
+    sub: "外部サイト"
+    external: true
 
   - href: "/favorites/"
     img: "/assets/img/hobby.png"
