@@ -300,6 +300,13 @@ body.theme-light .favorites-page .fav-now {
   opacity: 0.85;
 }
 
+/* 絵文字付きリンクカードは、右上を絵文字に譲ってバッジを右下に置く */
+.fav-card--emoji-link .fav-card__badge {
+  top: auto;
+  bottom: 18px;
+  right: 16px;
+}
+
 /* ── Emoji ── */
 .fav-card__emoji {
   position: absolute;

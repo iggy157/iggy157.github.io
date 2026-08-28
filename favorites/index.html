@@ -61,8 +61,12 @@ main_class: "screen favorites-page"
         {%- else %}{% assign badge = "official" %}{% endif %}
 
         <a href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer"
-           class="fav-card fav-card--link" data-fav-row data-search="{{ search }}"
+           class="fav-card fav-card--link{% if item.emoji %} fav-card--emoji-link{% endif %}"
+           data-fav-row data-search="{{ search }}"
            id="fav-{{ cat.id }}-{{ forloop.index }}" style="--accent:var(--fav-{{ cat.id }})">
+          {%- if item.emoji %}
+          <span class="fav-card__emoji">{{ item.emoji }}</span>
+          {%- endif %}
           <span class="fav-card__badge">{{ badge }} ↗</span>
           <div class="fav-card__body">
             <div class="fav-card__name fav-name">{{ item.name | escape }}</div>

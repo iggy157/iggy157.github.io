@@ -14,7 +14,8 @@
 #  name     : 必須。カードの見出し
 #  sub      : 2行目の小さい文字（アーティスト名・英訳など）
 #  url      : 書くとリンクカードになる。省略すると絵文字カード
-#  emoji    : リンクなしカードのアイコン
+#  emoji    : カード右上のアイコン。url と併用すると
+#             リンクカードのまま絵文字を出せる
 #  badge    : リンクの種類。省略時は URL から自動判定
 #             /playlist/ → playlist, open.spotify.com → spotify,
 #             tabelog.com → tabelog, それ以外 → official
@@ -238,7 +239,9 @@
     - name: 洋服
       sub: Fashion
       emoji: 👔
-      keywords: clothes
+      url: https://my-items.iggy157.workers.dev/
+      badge: my items
+      keywords: clothes closet
 
 
 # ──────────────────────────────────────────────────────────────

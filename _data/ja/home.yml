@@ -1,54 +1,55 @@
 # ホーム画面のアイコングリッドと Dock（日本語）。英語は _data/en/home.yml
+# title（アイコン名）は日英共通で英語表記に統一。翻訳するのは sub だけ。
 # アプリを追加・並べ替えするときはこのリストを編集する（両言語のファイルを揃えること）。
 
 apps:
   - href: "/about/"
     img: "/assets/img/about.png"
     alt: "About icon"
-    title: "自己紹介"
+    title: "About"
     sub: "プロフィール"
 
   - href: "/research/"
     img: "/assets/img/research.png"
     alt: "Research icon"
-    title: "研究"
+    title: "Research"
     sub: "多人数対話"
 
   - href: "/publications/"
     img: "/assets/img/papers.png"
     alt: "Papers icon"
-    title: "論文"
+    title: "Papers"
     sub: "Publications"
 
   - href: "/experience/"
     img: "/assets/img/experience.png"
     alt: "Experience icon"
-    title: "経験"
+    title: "Experience"
     sub: "大会運営・発表・TA"
 
   - href: "/projects/"
     img: "/assets/img/projects.png"
     alt: "Projects icon"
-    title: "プロジェクト"
+    title: "Projects"
     sub: "GitHub"
 
   - href: "https://pri-blog.iggy157.workers.dev/"
     img: "/assets/img/blog.png"
     alt: "Blog icon"
-    title: "ブログ"
+    title: "Blog"
     sub: "外部サイト"
     external: true
 
   - href: "/favorites/"
     img: "/assets/img/hobby.png"
     alt: "Hobby icon"
-    title: "趣味"
+    title: "Hobby"
     sub: "好きなもの"
 
   - href: "/contact/"
     img: "/assets/img/contact.png"
     alt: "Contact icon"
-    title: "連絡先"
+    title: "Contact"
     sub: "お問い合わせ"
 
 dock:
